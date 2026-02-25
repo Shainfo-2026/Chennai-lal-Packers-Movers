@@ -1,0 +1,145 @@
+/* ===========================================
+   GLOBAL COLOR VARIABLES – CHENNAI LAL THEME
+=========================================== */
+:root {
+
+  /* PRIMARY BRAND COLORS */
+  --clr-primary: #062242;     /* Deep Navy */
+  --clr-secondary: #3F6C87;   /* Steel Blue */
+  --clr-accent: #4F8AA8;      /* Light Accent Blue */
+
+  /* BACKGROUNDS */
+  --bg-main: #FDFCFC;         /* Clean White */
+  --bg-light: #F4F8FB;        /* Soft Section Background */
+  --bg-dark: #031423;         /* Header/Footer */
+
+  /* TEXT COLORS */
+  --txt-dark: #062242;
+  --txt-medium: #3F6C87;
+  --txt-light: #ffffff;
+
+  /* SHADOW */
+  --shadow-soft: 0 10px 30px rgba(6,34,66,0.12);
+}
+
+/* ===========================================
+   BODY + GLOBAL
+=========================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--txt-dark);
+}
+
+body {
+  padding-top: 90px;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7vw;
+
+  background: var(--bg-dark);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Logo text */
+.header .logo {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--txt-light);
+  letter-spacing: 1px;
+}
+
+.header a {
+  color: var(--txt-light);
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Elegant underline hover */
+.header a:hover {
+  color: var(--clr-accent);
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+.footer {
+  text-align: center;
+  padding: 30px 6vw;
+  background: var(--bg-dark);
+  color: #C8D7E5;
+  font-size: 14px;
+}
+
+/* ===========================================
+   PAGE AREA
+=========================================== */
+.page {
+  min-height: 70vh;
+  padding: 100px 7vw;
+  background: var(--bg-main);
+}
+
+/* ===========================================
+   SECTION ALTERNATE BACKGROUND
+=========================================== */
+.section-light {
+  background: var(--bg-light);
+}
+
+/* ===========================================
+   BUTTON STYLE (Reusable)
+=========================================== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(6,34,66,0.25);
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 5vw;
+  }
+
+  .header a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .page {
+    padding: 80px 5vw;
+  }
+}
