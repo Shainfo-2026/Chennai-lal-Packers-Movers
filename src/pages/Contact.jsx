@@ -13,7 +13,7 @@ export default function ContactPage() {
   const [success, setSuccess] = useState(false);
   const sectionRef = useRef(null);
 
-  const PHONE_NUMBER = "917550057453";
+  const PHONE_NUMBER = "919361046387";
 
   const handleSubmit = (e) => {
     e.preventDefault();

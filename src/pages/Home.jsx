@@ -2265,7 +2265,7 @@ body{ font-family:Inter, system-ui; }
   };
 
   const handleCallNow = () => {
-    window.location.href = "tel:+919176543210";
+    window.location.href = "tel:+919361046387";
   };
 
   return (

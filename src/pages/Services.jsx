@@ -12,7 +12,7 @@ function ServicesShowcase() {
   const sectionRef = useRef([]);
 
   const openWhatsApp = (service) => {
-    const ownerNumber = "917550057453";
+    const ownerNumber = "919361046387";
     const message = `Hello SPS Packers & Movers 👋
 
 I am interested in ${service}.
