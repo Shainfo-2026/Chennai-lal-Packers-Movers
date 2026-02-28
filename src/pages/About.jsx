@@ -1125,6 +1125,7 @@ function WhyChooseSPS() {
 
 
 
+
 function AwardsStripDark() {
 
   const sectionRef = useRef(null);
@@ -1146,9 +1147,9 @@ function AwardsStripDark() {
 
 /* ===== SECTION ===== */
 .sps-awards-dark{
-  padding:0px 6vw;
+  padding:10px 6vw;
   background:
-    radial-gradient(circle at top, rgba(255,215,0,0.08), transparent 50%),
+    radial-gradient(circle at top, rgba(255,215,0,0.05), transparent 50%),
     linear-gradient(180deg,#0a1624,#05101c);
   font-family:Inter,system-ui;
   overflow:hidden;
@@ -1158,7 +1159,7 @@ function AwardsStripDark() {
 /* ===== HEADER ===== */
 .sps-awards-dark-head{
   text-align:center;
-  margin-bottom:70px;
+  margin-bottom:80px;
   opacity:0;
   transform:translateY(40px);
   transition:0.9s ease;
@@ -1171,15 +1172,15 @@ function AwardsStripDark() {
 
 .sps-awards-dark-head small{
   display:block;
-  font-size:13px;
-  letter-spacing:0.2em;
-  font-weight:800;
+  font-size:12px;
+  letter-spacing:0.3em;
+  font-weight:700;
   color:#d4af37;
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
 
 .sps-awards-dark-head h2{
-  font-size:44px;
+  font-size:46px;
   font-weight:900;
   color:#ffffff;
 }
@@ -1197,80 +1198,79 @@ function AwardsStripDark() {
 
 .sps-awards-track{
   display:flex;
-  gap:90px;
+  gap:60px;
   width:max-content;
-  animation:scrollAwards 55s linear infinite;
+  animation:scrollAwards 45s linear infinite;
 }
 
 .sps-awards-dark:hover .sps-awards-track{
   animation-play-state:paused;
 }
 
-/* ===== CARD ===== */
+/* ===== GLASS CARD ===== */
 .sps-award-dark{
   position:relative;
-  min-width:200px;
+  min-width:220px;
   height:120px;
-  border-radius:22px;
+  border-radius:20px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg,#ffd700,#d4af37,#f8e48c);
-  box-shadow:
-    0 15px 35px rgba(255,215,0,0.25),
-    inset 0 2px 8px rgba(255,255,255,0.5);
-  transition:all .4s ease;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,215,0,0.25);
   overflow:hidden;
+  transition:all .4s ease;
 }
 
-/* Shine effect */
+/* Animated Gold Border */
 .sps-award-dark::before{
   content:"";
   position:absolute;
-  top:-100%;
-  left:-100%;
-  width:200%;
-  height:200%;
-  background:linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255,255,255,0.5),
-    transparent 70%
-  );
-  transform:rotate(25deg);
-  transition:0.8s;
+  inset:-1px;
+  border-radius:22px;
+  padding:1px;
+  background:linear-gradient(120deg,#ffd700,#d4af37,#f8e48c,#ffd700);
+  background-size:300% 300%;
+  animation:goldFlow 6s linear infinite;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
 }
 
-.sps-award-dark:hover::before{
-  top:100%;
-  left:100%;
-}
-
-.sps-award-dark span{
-  font-weight:900;
-  font-size:18px;
-  color:#062242;
-  letter-spacing:1px;
-}
-
-/* Hover */
+/* Subtle Glow */
 .sps-award-dark:hover{
-  transform:translateY(-10px) scale(1.08);
-  box-shadow:
-    0 25px 60px rgba(255,215,0,0.5),
-    inset 0 2px 8px rgba(255,255,255,0.7);
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(255,215,0,0.15);
 }
 
-/* ===== ANIMATION ===== */
+/* Text */
+.sps-award-dark span{
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:2px;
+  color:#f8e48c;
+  text-transform:uppercase;
+}
+
+/* ===== ANIMATIONS ===== */
 @keyframes scrollAwards{
   from{ transform:translateX(0); }
   to{ transform:translateX(-50%); }
+}
+
+@keyframes goldFlow{
+  0%{ background-position:0% 50%; }
+  100%{ background-position:100% 50%; }
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:600px){
 
   .sps-awards-dark{
-    padding:0px 5vw;
+    padding:70px 5vw;
   }
 
   .sps-awards-dark-head h2{
@@ -1278,12 +1278,12 @@ function AwardsStripDark() {
   }
 
   .sps-award-dark{
-    min-width:160px;
-    height:100px;
+    min-width:170px;
+    height:95px;
   }
 
   .sps-awards-track{
-    gap:50px;
+    gap:40px;
     animation:scrollAwards 35s linear infinite;
   }
 }
@@ -1297,7 +1297,6 @@ function AwardsStripDark() {
 
   }, []);
 
-  /* ===== GOLD BADGE TEXT CONTENT ===== */
   const awards = [
     "ISO CERTIFIED",
     "MSME REGISTERED",
@@ -1328,8 +1327,6 @@ function AwardsStripDark() {
     </section>
   );
 }
-
-
 
 
 

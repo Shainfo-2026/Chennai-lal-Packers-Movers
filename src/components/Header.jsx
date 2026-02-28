@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [courseOpen, setCourseOpen] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     const css = `
+
 /* ================= HEADER ================= */
 .sps-header{
   position:fixed;
@@ -24,7 +25,7 @@ export default function Header() {
   box-shadow:0 10px 30px rgba(21,48,77,0.35);
 }
 
-/* ================= LOGO WRAPPER ================= */
+/* ================= LOGO ================= */
 .sps-logo{
   display:flex;
   align-items:center;
@@ -33,14 +34,12 @@ export default function Header() {
   z-index:10001;
 }
 
-/* LOGO IMAGE */
 .sps-logo img{
   height:55px;
   width:auto;
   object-fit:contain;
 }
 
-/* LOGO TEXT */
 .sps-logo-text{
   font-size:18px;
   font-weight:900;
@@ -49,45 +48,80 @@ export default function Header() {
   -webkit-text-fill-color:transparent;
 }
 
-/* DESKTOP NAV */
+/* ================= NAV ================= */
 .sps-nav{
   display:flex;
   gap:32px;
+  align-items:center;
 }
 
-.sps-nav a{
+.sps-nav a,
+.sps-dropdown-btn{
   text-decoration:none;
   font-weight:600;
   color:#ffffff;
   font-size:15px;
   position:relative;
+  cursor:pointer;
   transition:0.3s ease;
 }
 
-/* HOVER */
-.sps-nav a:hover{
+.sps-nav a:hover,
+.sps-dropdown-btn:hover{
   color:#c7dfff;
 }
 
-/* ACTIVE LINK */
 .sps-nav a.active{
   color:#c7dfff;
 }
 
-/* ACTIVE UNDERLINE */
-.sps-nav a.active::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:100%;
-  height:3px;
-  border-radius:2px;
-  background:linear-gradient(90deg,#ffffff,#c7dfff);
-  box-shadow:0 0 10px rgba(199,223,255,0.6);
+/* ================= DROPDOWN ================= */
+.sps-dropdown{
+  position:relative;
 }
 
-/* RIGHT SECTION */
+.sps-dropdown-menu{
+  position:absolute;
+  top:45px;
+  left:0;
+  width:320px;
+  background:#ffffff;
+  border-radius:10px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  animation:fadeIn 0.25s ease;
+}
+
+.sps-dropdown-menu.show{
+  display:flex;
+}
+
+.sps-dropdown-menu a{
+  padding:14px 18px;
+  font-size:14px;
+  color:#15304D;
+  border-bottom:1px solid #eee;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.sps-dropdown-menu a:last-child{
+  border-bottom:none;
+}
+
+.sps-dropdown-menu a:hover{
+  background:#f2f6ff;
+}
+
+/* animation */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(8px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ================= CTA ================= */
 .sps-right{
   display:flex;
   align-items:center;
@@ -95,7 +129,6 @@ export default function Header() {
   z-index:10001;
 }
 
-/* CTA BUTTON */
 .sps-cta{
   background: linear-gradient(90deg, #ffffff, #c7dfff);
   color:#15304D;
@@ -112,7 +145,7 @@ export default function Header() {
   box-shadow:0 0 18px rgba(199,223,255,0.8);
 }
 
-/* HAMBURGER */
+/* ================= HAMBURGER ================= */
 .sps-hamburger{
   display:none;
   font-size:32px;
@@ -122,14 +155,6 @@ export default function Header() {
 
 /* ================= MOBILE ================= */
 @media(max-width:900px){
-
-  .sps-logo img{
-    height:45px;
-  }
-
-  .sps-logo-text{
-    font-size:14px;
-  }
 
   .sps-nav{
     position:fixed;
@@ -142,15 +167,16 @@ export default function Header() {
     gap:22px;
     padding:30px 0;
     display:none;
-    z-index:10000;
   }
 
   .sps-nav.open{
     display:flex;
   }
 
-  .sps-nav a{
-    font-size:18px;
+  .sps-dropdown-menu{
+    position:static;
+    width:90%;
+    background:#ffffff;
   }
 
   .sps-hamburger{
@@ -169,6 +195,7 @@ export default function Header() {
 .page{
   padding-top:90px;
 }
+
 `;
     const style = document.createElement("style");
     style.innerHTML = css;
@@ -180,7 +207,7 @@ export default function Header() {
   return (
     <header className="sps-header">
 
-      {/* LOGO + TEXT */}
+      {/* LOGO */}
       <Link to="/" className="sps-logo">
         <img src="/images/loo.png" alt="Chennai Lal Packers & Movers Logo" />
         <div className="sps-logo-text">
@@ -193,6 +220,27 @@ export default function Header() {
         <Link to="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
         <Link to="/about" className={isActive("/about") ? "active" : ""} onClick={() => setOpen(false)}>About</Link>
         <Link to="/services" className={isActive("/services") ? "active" : ""} onClick={() => setOpen(false)}>Services</Link>
+
+        {/* COURSES DROPDOWN */}
+        {/* <div className="sps-dropdown">
+          <div
+            className="sps-dropdown-btn"
+            onClick={() => setCourseOpen(!courseOpen)}
+          >
+            Courses ▾
+          </div>
+
+          <div className={`sps-dropdown-menu ${courseOpen ? "show" : ""}`}>
+            <Link to="/courses/smm" onClick={() => { setOpen(false); setCourseOpen(false); }}>
+               Digital Marketing Master (CDMM)
+            </Link>
+            <Link to="/courses/seo" onClick={() => { setOpen(false); setCourseOpen(false); }}>
+              Certified SEO Course
+            </Link>
+        
+          </div>
+        </div> */}
+
         <Link to="/contact" className={isActive("/contact") ? "active" : ""} onClick={() => setOpen(false)}>Contact</Link>
         <Link to="/blog" className={isActive("/blog") ? "active" : ""} onClick={() => setOpen(false)}>Blog</Link>
       </nav>

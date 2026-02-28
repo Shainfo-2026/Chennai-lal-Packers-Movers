@@ -237,12 +237,12 @@ function AboutSlide() {
 
           <div className="sps-about-stats">
             <div className="sps-stat">
-              <h3 ref={stat1Ref}>0%</h3>
+              <h3 ref={stat1Ref}>100%</h3>
               <p>Customer Satisfaction across all relocation services.</p>
             </div>
 
             <div className="sps-stat">
-              <h3 ref={stat2Ref}>0+</h3>
+              <h3 ref={stat2Ref}>100+</h3>
               <p>Successful Home, Office & Commercial Relocations completed.</p>
             </div>
           </div>
@@ -710,6 +710,7 @@ function WorkProcess() {
 
 
 
+
 function CustomerSatisfactionTimeline() {
   const sectionRef = useRef(null);
 
@@ -718,7 +719,7 @@ function CustomerSatisfactionTimeline() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("sps-cust3-visible");
+            entry.target.classList.add("sps-cust4-visible");
           }
         });
       },
@@ -731,162 +732,115 @@ function CustomerSatisfactionTimeline() {
 
     const css = `
 
-/* ================== SECTION ================== */
-.sps-cust3-section {
-  // padding: 100px 6vw;
+/* ================= SECTION ================= */
+.sps-cust4-section {
+  padding: 100px 6vw;
   font-family: Inter, system-ui;
-  // background: #ffffff;
+  background: #f9fbff;
   overflow: hidden;
 }
 
-/* TITLE */
-.sps-cust3-title {
-  text-align: center;
-  font-size: 44px;
-  font-weight: 900;
-  color: #1E1B4B;
-  margin-bottom: 25px;
+/* ================= LAYOUT ================= */
+.sps-cust4-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ================= LEFT CONTENT ================= */
+.sps-cust4-left {
+  flex: 1;
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateX(-50px);
   transition: 0.8s ease;
 }
 
-.sps-cust3-visible .sps-cust3-title {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sps-cust3-sub {
-  max-width: 780px;
-  margin: 0 auto 70px auto;
-  text-align: center;
-  font-size: 17px;
-  color: #555;
-  line-height: 1.8;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease 0.2s;
-}
-
-.sps-cust3-visible .sps-cust3-sub {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= TIMELINE ================= */
-.sps-cust3-timeline {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-  padding-left: 45px;
-}
-
-/* ANIMATED LINE */
-.sps-cust3-timeline::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  width: 4px;
-  height: 0;
-  background: linear-gradient(to bottom,#062242,#3F6C87);
-  transition: height 1.2s ease;
-}
-
-.sps-cust3-visible .sps-cust3-timeline::before {
-  height: 100%;
-}
-
-/* ITEM */
-.sps-cust3-item {
-  position: relative;
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: 0.7s ease;
-}
-
-.sps-cust3-visible .sps-cust3-item {
+.sps-cust4-visible .sps-cust4-left {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* STAGGER */
-.sps-cust3-visible .sps-cust3-item:nth-child(1){ transition-delay:0.3s; }
-.sps-cust3-visible .sps-cust3-item:nth-child(2){ transition-delay:0.5s; }
-.sps-cust3-visible .sps-cust3-item:nth-child(3){ transition-delay:0.7s; }
-.sps-cust3-visible .sps-cust3-item:nth-child(4){ transition-delay:0.9s; }
-.sps-cust3-visible .sps-cust3-item:nth-child(5){ transition-delay:1.1s; }
+.sps-cust4-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #1E1B4B;
+  margin-bottom: 20px;
+}
 
-/* DOT */
-.sps-cust3-item::before {
-  content: "";
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  position: absolute;
-  left: -33px;
-  top: 5px;
-  background: linear-gradient(135deg,#062242,#3F6C87);
-  box-shadow: 0 0 0 6px rgba(6,34,66,0.1);
+.sps-cust4-sub {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ================= RIGHT GRID ================= */
+.sps-cust4-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.8s ease 0.2s;
+}
+
+.sps-cust4-visible .sps-cust4-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= CARD ================= */
+.sps-cust4-card {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a); /* Dark blue gradient */
+  padding: 28px 22px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   transition: 0.3s ease;
-}
-
-.sps-cust3-item:hover::before {
-  transform: scale(1.2);
-}
-
-/* TEXT CARD */
-.sps-cust3-text {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  color: #2a2a2a;
-  background: #f9fbff;
-  padding: 18px 22px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+  color: #ffffff; /* Text white */
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.sps-cust3-item:hover .sps-cust3-text {
-  transform: translateX(6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+.sps-cust4-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
 }
 
-/* ================= TABLET ================= */
+/* ICON STYLE */
+.sps-cust4-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffffff;  /* White background */
+  color: #1e3a8a;        /* Blue icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-  .sps-cust3-title {
-    font-size: 36px;
-  }
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:600px){
-  .sps-cust3-section {
-    padding: 70px 5vw;
+  .sps-cust4-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .sps-cust3-title {
-    font-size: 28px;
+  .sps-cust4-right {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
-  .sps-cust3-sub {
-    font-size: 15px;
-  }
-
-  .sps-cust3-timeline {
-    padding-left: 35px;
-    gap: 35px;
-  }
-
-  .sps-cust3-item::before {
-    left: -28px;
-  }
-
-  .sps-cust3-text {
-    font-size: 15px;
+  .sps-cust4-title {
+    font-size: 32px;
   }
 }
 
@@ -900,47 +854,57 @@ function CustomerSatisfactionTimeline() {
   }, []);
 
   return (
-    <section className="sps-cust3-section" ref={sectionRef}>
+    <section className="sps-cust4-section" ref={sectionRef}>
+      <div className="sps-cust4-container">
 
-      <h2 className="sps-cust3-title">
-        ⭐ Customer Satisfaction Guaranteed
-      </h2>
-
-      <p className="sps-cust3-sub">
-        We prioritize safety, speed, and service quality, making us one of the
-        most preferred packers and movers in Tamilnadu.
-        <br /><br />
-        Thousands of customers trust us because of:
-      </p>
-
-
-      <div className="sps-cust3-timeline">
-
-        <div className="sps-cust3-item">
-          <div className="sps-cust3-text">Consistent service quality</div>
+        {/* LEFT SIDE */}
+        <div className="sps-cust4-left">
+          <h2 className="sps-cust4-title">
+            ⭐ Customer Satisfaction Guaranteed
+          </h2>
+          <p className="sps-cust4-sub">
+            We prioritize safety, speed, and service quality, making us one of
+            the most preferred packers and movers in Tamilnadu.
+            <br /><br />
+            Thousands of customers trust us because of our commitment to
+            professionalism, transparency, and reliable support.
+          </p>
         </div>
 
-        <div className="sps-cust3-item">
-          <div className="sps-cust3-text">Reliable staff</div>
-        </div>
+        {/* RIGHT SIDE GRID */}
+        <div className="sps-cust4-right">
 
-        <div className="sps-cust3-item">
-          <div className="sps-cust3-text">Transparent pricing</div>
-        </div>
+          <div className="sps-cust4-card">
+            <div className="sps-cust4-icon">✔</div>
+            Consistent Service Quality
+          </div>
 
-        <div className="sps-cust3-item">
-          <div className="sps-cust3-text">Fast response</div>
-        </div>
+          <div className="sps-cust4-card">
+            <div className="sps-cust4-icon">👨‍🔧</div>
+            Reliable Staff
+          </div>
 
-        <div className="sps-cust3-item">
-          <div className="sps-cust3-text">Excellent Google reviews</div>
-        </div>
+          <div className="sps-cust4-card">
+            <div className="sps-cust4-icon">💰</div>
+            Transparent Pricing
+          </div>
 
+          <div className="sps-cust4-card">
+            <div className="sps-cust4-icon">⚡</div>
+            Fast Response
+          </div>
+
+          <div className="sps-cust4-card">
+            <div className="sps-cust4-icon">⭐</div>
+            Excellent Google Reviews
+          </div>
+
+        </div>
       </div>
-
     </section>
   );
 }
+
 
 
 
@@ -1233,7 +1197,6 @@ function WhyyChooseUs() {
 
 
 
-
 function StrengthsSection() {
 
   const sectionRef = useRef(null);
@@ -1242,7 +1205,6 @@ function StrengthsSection() {
   useEffect(() => {
 
     const animateCount = (el, target) => {
-      let start = 0;
       const duration = 1800;
       const startTime = performance.now();
 
@@ -1251,9 +1213,7 @@ function StrengthsSection() {
         const value = Math.floor(progress * target);
         el.innerText = value + "+";
 
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        }
+        if (progress < 1) requestAnimationFrame(update);
       };
 
       requestAnimationFrame(update);
@@ -1275,9 +1235,7 @@ function StrengthsSection() {
       });
     }, { threshold: 0.3 });
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     const css = `
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1285,9 +1243,7 @@ function StrengthsSection() {
 /* ===== SECTION ===== */
 .strengths-section {
   width: 100%;
-  // padding: 100px 6vw;
-  // background: #F6F1F8;
-  padding-bottom:20px;
+  padding: 20px 6vw 60px 6vw;
   text-align: center;
   font-family: Inter, system-ui;
   overflow: hidden;
@@ -1326,15 +1282,52 @@ function StrengthsSection() {
   gap: 60px 40px;
 }
 
-/* CARD ITEM */
+/* CARD */
 .strength-item {
-  background: #fff;
+  background: #ffffff;
   padding: 35px 20px;
-  border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: 0.4s ease;
+  border-radius: 20px;
+  border: 1.5px solid rgba(6,34,66,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+/* Soft Moving Light Effect */
+.strength-item::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 4s infinite;
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* Remove Hover Effects Completely */
+.strength-item:hover {
+  transform: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 .strengths-visible .strength-item {
@@ -1349,12 +1342,6 @@ function StrengthsSection() {
 .strengths-visible .strength-item:nth-child(4){ transition-delay:0.8s; }
 .strengths-visible .strength-item:nth-child(5){ transition-delay:1s; }
 .strengths-visible .strength-item:nth-child(6){ transition-delay:1.2s; }
-
-/* HOVER */
-.strength-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 45px rgba(6,34,66,0.15);
-}
 
 /* NUMBER */
 .strength-item h3 {
@@ -1391,7 +1378,7 @@ function StrengthsSection() {
 @media(max-width: 600px) {
 
   .strengths-section {
-    padding: 0px 5vw;
+    padding: 0px 5vw 40px 5vw;
   }
 
   .strengths-title {
@@ -1432,15 +1419,13 @@ function StrengthsSection() {
 
       <div className="strengths-grid">
 
-
-
         {[
-          { num: 0, title: "Years Of Trust", desc: "Delivering safe moves since 2025" },
-          { num: 0, title: "Moves Annually", desc: "Across Chennai & all major cities" },
-          { num: 0, title: "Million Sq.Ft", desc: "Secure warehousing space" },
-          { num: 0, title: "Trained Manpower", desc: "Professional team for safe moves" },
-          { num: 0, title: "Branches PAN India", desc: "Serving 100+ locations" },
-          { num: 0, title: "Vehicles", desc: "Fleet for every move requirement" },
+          { num: 15, title: "Years Of Trust", desc: "Delivering safe moves since 2009" },
+          { num: 1200, title: "Moves Annually", desc: "Across Chennai & all major cities" },
+          { num: 2, title: "Million Sq.Ft", desc: "Secure warehousing space" },
+          { num: 250, title: "Trained Manpower", desc: "Professional team for safe moves" },
+          { num: 100, title: "Branches PAN India", desc: "Serving 100+ locations" },
+          { num: 80, title: "Vehicles", desc: "Fleet for every move requirement" },
         ].map((item, i) => (
           <div className="strength-item" key={i}>
             <h3
@@ -1458,6 +1443,8 @@ function StrengthsSection() {
     </section>
   );
 }
+
+
 
 
 
@@ -1828,6 +1815,7 @@ function WhatWeProvide() {
   );
 }
 
+
 function FeaturesDiamond() {
 
   const sectionRef = useRef(null);
@@ -1852,12 +1840,11 @@ function FeaturesDiamond() {
     const css = `
 * { box-sizing:border-box; margin:0; padding:0; }
 
-/* ================= SECTION ================= */
+/* ================= DARK SECTION ================= */
 .features-section {
   width: 100%;
-  // padding: 110px 6vw;
-  // background: #ffffff;
-   padding-bottom:10px;
+  padding: 11px 6vw;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   text-align: center;
   font-family: Inter, system-ui;
   overflow:hidden;
@@ -1865,26 +1852,22 @@ function FeaturesDiamond() {
 
 /* TITLE */
 .features-title {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 900;
-  color: #062242;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   opacity:0;
   transform:translateY(40px);
   transition:0.8s ease;
-}
-
-.features-title span {
-  background: linear-gradient(135deg, #062242, #3F6C87);
+  background: linear-gradient(135deg, #ffffff, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .features-sub {
   max-width: 700px;
-  margin: 0 auto 70px auto;
+  margin: 0 auto 80px auto;
   font-size: 17px;
-  color: #486C85;
+  color: #cbd5e1;
   line-height: 1.7;
   opacity:0;
   transform:translateY(40px);
@@ -1901,15 +1884,19 @@ function FeaturesDiamond() {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  gap: 40px;
 }
 
 /* CARD */
 .feature-card {
-  text-align: center;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.4s ease;
   opacity:0;
   transform:translateY(50px);
-  transition:0.8s ease;
 }
 
 .features-visible .feature-card {
@@ -1923,55 +1910,42 @@ function FeaturesDiamond() {
 .features-visible .feature-card:nth-child(3){ transition-delay:0.6s; }
 .features-visible .feature-card:nth-child(4){ transition-delay:0.8s; }
 
-/* ================= DIAMOND ================= */
-.diamond-box {
-  width: 150px;
-  height: 150px;
+/* HOVER */
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  border-color: rgba(147,197,253,0.5);
+}
+
+/* ICON CIRCLE */
+.icon-circle {
+  width: 80px;
+  height: 80px;
   margin: 0 auto 25px auto;
-  transform: rotate(45deg);
-  background: linear-gradient(135deg, #062242, #3F6C87);
-  border-radius: 18px;
+  border-radius: 50%;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  animation: float 4s ease-in-out infinite;
 }
 
-.diamond-box svg {
-  width: 70px;
-  height: 70px;
-  transform: rotate(-45deg);
-  fill: #ffffff;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float {
-  0% { transform: rotate(45deg) translateY(0); }
-  50% { transform: rotate(45deg) translateY(-10px); }
-  100% { transform: rotate(45deg) translateY(0); }
-}
-
-/* HOVER */
-.diamond-box:hover {
-  transform: rotate(45deg) translateY(-14px) scale(1.1);
-  box-shadow: 0 30px 55px rgba(6,34,66,0.4);
+.icon-circle svg {
+  width: 40px;
+  height: 40px;
+  fill: #1e3a8a;
 }
 
 /* TEXT */
 .feature-card h3 {
   font-size: 20px;
   font-weight: 800;
-  color: #062242;
-  margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .feature-card p {
   font-size: 15px;
-  color: #486C85;
-  max-width: 260px;
-  margin: 0 auto;
+  color: #cbd5e1;
   line-height: 1.6;
 }
 
@@ -1979,7 +1953,6 @@ function FeaturesDiamond() {
 @media(max-width:1000px){
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
   }
 }
 
@@ -1987,32 +1960,15 @@ function FeaturesDiamond() {
 @media(max-width:600px){
 
   .features-section {
-    // padding: 70px 5vw;
-    padding-bottom:10px;
+    padding: 70px 5vw;
   }
 
   .features-title {
-    font-size: 28px;
-  }
-
-  .features-sub {
-    font-size: 15px;
-    margin-bottom: 40px;
+    font-size: 30px;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .diamond-box {
-    width: 120px;
-    height: 120px;
-  }
-
-  .diamond-box svg {
-    width: 55px;
-    height: 55px;
   }
 }
 `;
@@ -2027,7 +1983,6 @@ function FeaturesDiamond() {
 
   const features = [
     {
-
       title: "Fully Insured",
       desc: "Full insurance coverage for total protection during your move.",
       icon: `<svg viewBox="0 0 24 24"><path d="M12 1l8 4v6c0 5.25-3.75 10-8 12-4.25-2-8-6.75-8-12V5l8-4z"/></svg>`
@@ -2053,7 +2008,7 @@ function FeaturesDiamond() {
     <section className="features-section" ref={sectionRef}>
 
       <h2 className="features-title">
-        Our <span>Features</span>
+        Our Features
       </h2>
 
       <p className="features-sub">
@@ -2065,7 +2020,7 @@ function FeaturesDiamond() {
         {features.map((f, i) => (
           <div key={i} className="feature-card">
             <div
-              className="diamond-box"
+              className="icon-circle"
               dangerouslySetInnerHTML={{ __html: f.icon }}
             />
             <h3>{f.title}</h3>
@@ -2078,7 +2033,6 @@ function FeaturesDiamond() {
     </section>
   );
 }
-
 
 
 
