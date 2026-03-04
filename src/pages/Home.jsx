@@ -40,8 +40,8 @@ function AboutSlide() {
 
             sectionRef.current.classList.add("sps-visible");
 
-            animateCount(stat1Ref.current, 0, "%");
-            animateCount(stat2Ref.current, 0, "+");
+            animateCount(stat1Ref.current, 100, "%");
+            animateCount(stat2Ref.current, 100, "+");
           }
         });
       },
@@ -242,7 +242,7 @@ function AboutSlide() {
             </div>
 
             <div className="sps-stat">
-              <h3 ref={stat2Ref}>100+</h3>
+              <h3 ref={stat2Ref}>99+</h3>
               <p>Successful Home, Office & Commercial Relocations completed.</p>
             </div>
           </div>
