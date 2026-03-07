@@ -200,7 +200,7 @@ const navigate = useNavigate();
   id: "id4",
   title: "Reliable Packing and Moving Services – Lal Packers and Movers Chennai",
   image: "/images/blog44.png",
-  date: "27 Feb 2026",
+  date: "20 Feb 2026",
   content: `
   
 
@@ -264,8 +264,8 @@ const navigate = useNavigate();
 {
   id: "id5",
   title: "A Complete Guide to Relocating in Chennai with Lal Packers and Movers",
-  image: "/images/blog123.png",
-  date: "03 Mar 2026",
+  image: "/images/blog10.png",
+  date: "25 Feb 2026",
   content: `
 
   <h2>A Complete Guide to Relocating in Chennai with Lal Packers and Movers</h2>
@@ -321,8 +321,8 @@ const navigate = useNavigate();
 {
   id: "id6",
   title: "Why Lal Packers and Movers Chennai is the Smart Choice for Packers and Movers in Chennai",
-  image: "/images/blog44.png",
-  date: "03 Mar 2026",
+  image: "/images/blog9.png",
+  date: "3 Mar 2026",
   content: `
 
   <h2>Why Lal Packers and Movers Chennai is the Smart Choice for Packers and Movers in Chennai</h2>
@@ -384,8 +384,8 @@ const navigate = useNavigate();
 {
   id: "id7",
   title: "Best Local Shifting Services in Chennai – Understanding the Moving Process, Costs and Benefits",
-  image: "/images/blog221.png",
-  date: "03 Mar 2026",
+  image: "/images/blog8.png",
+  date: "6 Mar 2026",
   content: `
 
   <h2>Best Local Shifting Services in Chennai – Understanding the Moving Process, Costs and Benefits</h2>

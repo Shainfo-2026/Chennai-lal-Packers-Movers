@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
+import emailjs from "@emailjs/browser";
 
 function MissionVision() {
 
@@ -674,10 +675,6 @@ function WhyChooseUsSection() {
 }
 
 
-
-
-
-
 function WhyDifferent() {
 
   const sectionRef = useRef(null);
@@ -903,7 +900,6 @@ function WhyDifferent() {
     </section>
   );
 }
-
 
 
 function WhyChooseSPS() {
@@ -2829,7 +2825,6 @@ function KeynoteTeamSection() {
 
 
 
-
 export default function About() {
 
   const [form, setForm] = useState({
@@ -2840,6 +2835,9 @@ export default function About() {
     service: ""
   });
 
+  const [loading, setLoading] = useState(false);
+  const [popup, setPopup] = useState("");
+
   const heroLeftRef = useRef(null);
   const cardRef = useRef(null);
   const featureRefs = useRef([]);
@@ -2847,24 +2845,55 @@ export default function About() {
   const handleHeroSubmit = (e) => {
     e.preventDefault();
 
-    const message = `
-About Page Enquiry – CHENNAI LAL Packers & Movers
+    setLoading(true);
 
-Name: ${form.name}
-Phone: ${form.phone}
-From City: ${form.from}
-To City: ${form.to}
-Service Type: ${form.service}
-    `;
+    const templateParams = {
+      name: form.name,
+      phone: form.phone,
+      from: form.from,
+      to: form.to,
+      service: form.service
+    };
 
-    const ownerNumber = "919361046387";
-    const whatsappURL = `https://wa.me/${ownerNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, "_blank");
+    emailjs.send(
+      "service_imdmeff",
+      "template_fj46ck6",
+      templateParams,
+      "yxT-hRvX41RhpOdfZ"
+    )
+    .then(() => {
+
+      setLoading(false);
+      setPopup("success");
+
+      setForm({
+        name: "",
+        phone: "",
+        from: "",
+        to: "",
+        service: ""
+      });
+
+      setTimeout(() => {
+        setPopup("");
+      }, 3000);
+
+    })
+    .catch((error) => {
+
+      console.log(error);
+      setLoading(false);
+      setPopup("error");
+
+      setTimeout(() => {
+        setPopup("");
+      }, 3000);
+
+    });
   };
 
   useEffect(() => {
 
-    /* ===== ANIMATION TRIGGER ===== */
     setTimeout(() => {
       heroLeftRef.current?.classList.add("show");
       cardRef.current?.classList.add("show");
@@ -2876,7 +2905,6 @@ Service Type: ${form.service}
       });
     }, 300);
 
-    /* ===== CSS ===== */
     const css = `
 *{ box-sizing:border-box; }
 
@@ -2909,7 +2937,36 @@ html,body{
   to{ background-size:110%; }
 }
 
+/* ===== POPUP ===== */
+
+.form-popup{
+  position:fixed;
+  top:30px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:14px 26px;
+  border-radius:10px;
+  color:#fff;
+  font-weight:700;
+  z-index:9999;
+  animation:popupfade 0.4s ease;
+}
+
+.form-popup.success{
+  background:#2ecc71;
+}
+
+.form-popup.error{
+  background:#e74c3c;
+}
+
+@keyframes popupfade{
+  from{opacity:0; transform:translate(-50%,-20px);}
+  to{opacity:1; transform:translate(-50%,0);}
+}
+
 /* ===== ANIMATIONS ===== */
+
 .fade-left,.fade-right,.fade-up{
   opacity:0;
   transform:translateY(40px);
@@ -2925,6 +2982,7 @@ html,body{
 }
 
 /* ===== LEFT CONTENT ===== */
+
 .heroq-left h1{
   font-size:48px;
   font-weight:900;
@@ -2944,6 +3002,7 @@ html,body{
 }
 
 /* FEATURES */
+
 .heroq-features{
   display:flex;
   flex-direction:column;
@@ -2973,6 +3032,7 @@ html,body{
 }
 
 /* ===== GLASS CARD ===== */
+
 .heroq-card{
   background: rgba(255,255,255,0.95);
   border-radius:24px;
@@ -2992,6 +3052,7 @@ html,body{
 }
 
 /* ===== FORM ===== */
+
 .heroq-card form{
   display:flex;
   flex-direction:column;
@@ -3009,13 +3070,6 @@ html,body{
   transition:0.3s ease;
 }
 
-.heroq-card input:focus,
-.heroq-card select:focus{
-  outline:none;
-  border-color:#3F6C87;
-  box-shadow:0 0 0 3px rgba(63,108,135,0.2);
-}
-
 .heroq-btn{
   margin-top:10px;
   padding:16px;
@@ -3029,57 +3083,11 @@ html,body{
   transition:0.3s ease;
 }
 
-.heroq-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 35px rgba(6,34,66,0.4);
+.heroq-btn:disabled{
+  opacity:0.7;
+  cursor:not-allowed;
 }
 
-.heroq-btn:active{
-  transform:scale(0.97);
-}
-
-/* ===== TABLET ===== */
-@media(max-width:1000px){
-  .heroq-section{
-    grid-template-columns:1fr;
-    padding:120px 5vw 60px;
-  }
-
-  .heroq-card{
-    justify-self:center;
-    margin-top:40px;
-  }
-
-  .heroq-left h1{
-    font-size:36px;
-  }
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-
-  .heroq-section{
-    padding:110px 5vw 50px;
-  }
-
-  .heroq-left h1{
-    font-size:28px;
-  }
-
-  .heroq-left p.sub{
-    font-size:15px;
-  }
-
-  .heroq-card{
-    padding:24px;
-  }
-
-  .heroq-card input,
-  .heroq-card select{
-    font-size:15px;
-    padding:13px;
-  }
-}
 `;
 
     const style = document.createElement("style");
@@ -3090,6 +3098,19 @@ html,body{
 
   return (
     <>
+
+      {popup === "success" && (
+        <div className="form-popup success">
+          Message sent successfully!
+        </div>
+      )}
+
+      {popup === "error" && (
+        <div className="form-popup error">
+          Failed to send message!
+        </div>
+      )}
+
       <section className="heroq-section">
 
         <div className="heroq-left fade-left" ref={heroLeftRef}>
@@ -3127,43 +3148,57 @@ html,body{
           <h3>Talk to Our Team</h3>
 
           <form onSubmit={handleHeroSubmit}>
-            <input placeholder="Full Name" required
+
+            <input
+              placeholder="Full Name"
+              required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
-            <input placeholder="Mobile Number" required
+
+            <input
+              placeholder="Mobile Number"
+              required
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
             />
-            <input placeholder="From City" required
+
+            <input
+              placeholder="From City"
+              required
               value={form.from}
               onChange={(e) => setForm({ ...form, from: e.target.value })}
             />
-            <input placeholder="To City" required
+
+            <input
+              placeholder="To City"
+              required
               value={form.to}
               onChange={(e) => setForm({ ...form, to: e.target.value })}
             />
 
-            <select required
+            <select
+              required
               value={form.service}
               onChange={(e) => setForm({ ...form, service: e.target.value })}
             >
-               <option value="">Select Service</option>
-                <option>House Shifting</option>
-                <option>Office Relocation</option>
-                <option>Vehicle Transportation</option>
-                <option>Godown Shifting</option>
-                <option>AC Installation</option>
-                <option>Commercial Moves</option>
+              <option value="">Select Service</option>
+              <option>House Shifting</option>
+              <option>Office Relocation</option>
+              <option>Vehicle Transportation</option>
+              <option>Godown Shifting</option>
+              <option>AC Installation</option>
+              <option>Commercial Moves</option>
             </select>
 
-            <button className="heroq-btn">Contact Us</button>
+            <button className="heroq-btn" disabled={loading}>
+              {loading ? "Sending..." : "Contact Us"}
+            </button>
+
           </form>
         </div>
       </section>
 
-      {/* Other Sections */}
-      {/* <AboutHero /> */}
       <WhyChooseUsSection />
       <MissionVision />
       <ChooseWe />
@@ -3176,6 +3211,7 @@ html,body{
       <ShiftingProcess />
       <KeyHighlights />
       <Testimonials />
+
     </>
   );
 }
