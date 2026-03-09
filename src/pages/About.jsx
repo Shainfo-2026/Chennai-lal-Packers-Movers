@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import emailjs from "@emailjs/browser";
 
@@ -3098,6 +3099,16 @@ html,body{
 
   return (
     <>
+
+ <Helmet>
+          <title>Top Home Shifting Chennai Packers Service
+ </title>
+          <meta
+            name="description"
+            content="Get to know Chennai Lal Packers Movers, Chennai's top choice for hassle-free packing and shifting. Our story shows proven care for your belongings. Relocate with ease call now!
+"
+          />
+        </Helmet>
 
       {popup === "success" && (
         <div className="form-popup success">

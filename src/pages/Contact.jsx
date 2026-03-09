@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactPage() {
 
@@ -10,44 +12,57 @@ export default function ContactPage() {
     service: ""
   });
 
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const sectionRef = useRef(null);
-
-  const PHONE_NUMBER = "919361046387";
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const message = `
-📦 *New Moving Enquiry*
+    setLoading(true);
 
-👤 Name: ${form.name}
-📞 Phone: ${form.phone}
-📍 From: ${form.from}
-🏁 To: ${form.to}
-🛠 Service: ${form.service}
-    `;
+    const templateParams = {
+      name: form.name,
+      phone: form.phone,
+      from: form.from,
+      to: form.to,
+      service: form.service
+    };
 
-    const whatsappURL = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
+    emailjs.send(
+      "service_imdmeff",
+      "template_fj46ck6",
+      templateParams,
+      "yxT-hRvX41RhpOdfZ"
+    )
+    .then(() => {
 
-    setSuccess(true);
+      setLoading(false);
+      setSuccess(true);
 
-    setForm({
-      name: "",
-      phone: "",
-      from: "",
-      to: "",
-      service: ""
+      setForm({
+        name: "",
+        phone: "",
+        from: "",
+        to: "",
+        service: ""
+      });
+
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
+
+    })
+    .catch((error) => {
+
+      console.log(error);
+      setLoading(false);
+
     });
-
-    setTimeout(() => {
-      window.location.href = whatsappURL;
-    }, 1200);
   };
 
   useEffect(() => {
 
-    /* ===== SCROLL REVEAL ===== */
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -79,7 +94,6 @@ export default function ContactPage() {
   transform:translateY(0);
 }
 
-/* Subtle floating gradient animation */
 .sps-contact::before{
   content:"";
   position:absolute;
@@ -96,7 +110,6 @@ export default function ContactPage() {
   to{ transform:translateY(40px); }
 }
 
-/* GRID */
 .sps-contact-grid{
   max-width:1200px;
   margin:auto;
@@ -106,7 +119,6 @@ export default function ContactPage() {
   align-items:center;
 }
 
-/* ===== LEFT ===== */
 .sps-contact-left{
   animation:fadeLeft 1s ease forwards;
 }
@@ -138,7 +150,6 @@ export default function ContactPage() {
   font-weight:700;
 }
 
-/* ===== FORM CARD ===== */
 .sps-contact-card{
   background:rgba(255,255,255,0.85);
   backdrop-filter:blur(18px);
@@ -182,7 +193,6 @@ export default function ContactPage() {
   box-shadow:0 0 0 3px rgba(6,34,66,0.15);
 }
 
-/* BUTTON */
 .sps-contact-btn{
   margin-top:8px;
   padding:16px;
@@ -201,7 +211,6 @@ export default function ContactPage() {
   box-shadow:0 15px 30px rgba(6,34,66,.35);
 }
 
-/* SUCCESS POPUP */
 .sps-success{
   position:fixed;
   bottom:30px;
@@ -221,9 +230,6 @@ export default function ContactPage() {
   to{opacity:1; transform:translateY(0) scale(1);}
 }
 
-/* ===== RESPONSIVE ===== */
-
-/* Tablet */
 @media(max-width:900px){
   .sps-contact-grid{
     grid-template-columns:1fr;
@@ -235,7 +241,6 @@ export default function ContactPage() {
   }
 }
 
-/* Mobile */
 @media(max-width:480px){
 
   .sps-contact{
@@ -265,10 +270,17 @@ export default function ContactPage() {
 
   return (
     <>
+     <Helmet>
+          <title>Call Chennai Lal Relocation Experts
+ </title>
+          <meta
+            name="description"
+            content="Need help with packing in Chennai? Reach Chennai Lal Packers Movers via phone or email. Get instant quotes and start your smooth relocation right away. "
+          />
+        </Helmet>
       <section className="sps-contact" ref={sectionRef}>
         <div className="sps-contact-grid">
 
-          {/* LEFT */}
           <div className="sps-contact-left">
             <h2>Contact CHENNAI LAL Packers & Movers</h2>
 
@@ -285,7 +297,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* FORM */}
           <div className="sps-contact-card">
             <h3>Get Free Moving Quote</h3>
 
@@ -332,11 +343,12 @@ export default function ContactPage() {
                 <option>Commercial Moves</option>
               </select>
 
-              <button className="sps-contact-btn">
-                Submit Enquiry
+              <button className="sps-contact-btn" disabled={loading}>
+                {loading ? "Sending..." : "Submit Enquiry"}
               </button>
             </form>
           </div>
+
         </div>
       </section>
 

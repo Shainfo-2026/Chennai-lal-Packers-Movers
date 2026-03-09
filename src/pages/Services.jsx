@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -2174,6 +2174,16 @@ export default function Services() {
 
   return (
     <>
+
+     <Helmet>
+          <title>Household Shifting Packers | ChennaiLal</title>
+          <meta
+            name="description"
+            content="Top Chennai packers and movers services for office moves. Expert unpacking and setup. Protect your goods every step. Get instant estimates now! "
+          />
+        </Helmet>
+
+
       <section className="sps-excellence" ref={heroRef}>
         <h1>
           Professional Packers & Movers <br />

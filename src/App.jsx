@@ -10,7 +10,7 @@ import Blog from "./pages/Blog";
 import Footer from "./components/Footer";
 import AssistantPopup from "./components/AssistantPopup";
 import ScrollToTop from "./components/ScrollToTop";
-import BlogDetails from "./pages/BlogDetails";
+// import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   return (

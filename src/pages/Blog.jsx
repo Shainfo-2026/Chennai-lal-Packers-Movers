@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 
 import { useEffect, useState } from "react";
 
@@ -533,6 +533,17 @@ const navigate = useNavigate();
 
   return (
     <>
+
+
+     <Helmet>
+          <title>Relocation Tips | Chennai Movers Blog </title>
+          <meta
+            name="description"
+            content="Chennai Lal Packers Movers contact page. Drop a message for fast moving quotes. Trust our team for safe packing and transport across the city. Act now!"
+          />
+        </Helmet>
+
+
       <section className="blog-section">
         <div className="blog-container">
 
