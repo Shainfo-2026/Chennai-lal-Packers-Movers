@@ -2906,7 +2906,8 @@ export default function About() {
       });
     }, 300);
 
-    const css = `
+const css = `
+
 *{ box-sizing:border-box; }
 
 html,body{
@@ -2918,76 +2919,31 @@ html,body{
 }
 
 /* ================= HERO SECTION ================= */
+/* MOBILE FIRST */
+
 .heroq-section{
   min-height:100vh;
   background:
     linear-gradient(rgba(6,34,66,0.75), rgba(6,34,66,0.75)),
     url("/images/truck.png") center/cover no-repeat;
 
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  align-items:center;
-  padding:100px 6vw 60px;
-  gap:50px;
-  position:relative;
-  animation: zoomBg 18s ease infinite alternate;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:90px 20px 50px;
+  gap:40px;
 }
 
-@keyframes zoomBg{
-  from{ background-size:100%; }
-  to{ background-size:110%; }
+/* LEFT CONTENT */
+
+.heroq-left{
+  text-align:center;
 }
-
-/* ===== POPUP ===== */
-
-.form-popup{
-  position:fixed;
-  top:30px;
-  left:50%;
-  transform:translateX(-50%);
-  padding:14px 26px;
-  border-radius:10px;
-  color:#fff;
-  font-weight:700;
-  z-index:9999;
-  animation:popupfade 0.4s ease;
-}
-
-.form-popup.success{
-  background:#2ecc71;
-}
-
-.form-popup.error{
-  background:#e74c3c;
-}
-
-@keyframes popupfade{
-  from{opacity:0; transform:translate(-50%,-20px);}
-  to{opacity:1; transform:translate(-50%,0);}
-}
-
-/* ===== ANIMATIONS ===== */
-
-.fade-left,.fade-right,.fade-up{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.9s cubic-bezier(.22,.61,.36,1);
-}
-
-.fade-left{ transform:translateX(-60px); }
-.fade-right{ transform:translateX(60px); }
-
-.show{
-  opacity:1;
-  transform:translate(0);
-}
-
-/* ===== LEFT CONTENT ===== */
 
 .heroq-left h1{
-  font-size:48px;
+  font-size:30px;
   font-weight:900;
-  line-height:1.2;
+  line-height:1.25;
   color:#ffffff;
 }
 
@@ -2996,10 +2952,10 @@ html,body{
 }
 
 .heroq-left p.sub{
-  margin:18px 0 30px;
-  font-size:18px;
+  margin:16px auto 28px;
+  font-size:16px;
   color:#ffffff;
-  max-width:540px;
+  max-width:500px;
 }
 
 /* FEATURES */
@@ -3007,12 +2963,13 @@ html,body{
 .heroq-features{
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:18px;
+  text-align:left;
 }
 
 .heroq-feature{
   display:flex;
-  gap:15px;
+  gap:14px;
   color:#ffffff;
 }
 
@@ -3022,8 +2979,8 @@ html,body{
 }
 
 .heroq-icon{
-  min-width:45px;
-  height:45px;
+  min-width:42px;
+  height:42px;
   border-radius:50%;
   background:linear-gradient(135deg,#062242,#3F6C87);
   color:#fff;
@@ -3032,61 +2989,131 @@ html,body{
   font-size:18px;
 }
 
-/* ===== GLASS CARD ===== */
+/* FORM CARD */
 
 .heroq-card{
-  background: rgba(255,255,255,0.95);
-  border-radius:24px;
-  padding:32px;
+  background:rgba(255,255,255,0.95);
+  border-radius:20px;
+  padding:24px;
   width:100%;
-  max-width:520px;
-  justify-self:end;
   border:1.5px solid rgba(6,34,66,0.2);
-  box-shadow:0 25px 60px rgba(6,34,66,0.25);
-  backdrop-filter:blur(12px);
+  box-shadow:0 20px 50px rgba(6,34,66,0.25);
+  backdrop-filter:blur(10px);
 }
 
 .heroq-card h3{
-  margin-bottom:18px;
+  margin-bottom:16px;
   color:#062242;
   font-weight:900;
+  text-align:center;
 }
 
-/* ===== FORM ===== */
+/* FORM */
 
 .heroq-card form{
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:14px;
 }
 
 .heroq-card input,
 .heroq-card select{
-  padding:15px;
-  border-radius:12px;
+  padding:14px;
+  border-radius:10px;
   border:1.5px solid #062242;
-  font-size:16px;
-  background:#ffffff;
-  color:#062242;
-  transition:0.3s ease;
+  font-size:15px;
+  width:100%;
 }
 
 .heroq-btn{
-  margin-top:10px;
-  padding:16px;
+  margin-top:6px;
+  padding:15px;
   border:none;
-  border-radius:12px;
+  border-radius:10px;
   background:linear-gradient(90deg,#062242,#3F6C87);
   color:#fff;
   font-weight:800;
-  font-size:17px;
+  font-size:16px;
   cursor:pointer;
-  transition:0.3s ease;
 }
 
-.heroq-btn:disabled{
-  opacity:0.7;
-  cursor:not-allowed;
+/* ========================= */
+/* 📲 TABLET (768px+) */
+/* ========================= */
+
+@media (min-width:768px){
+
+.heroq-section{
+  padding:110px 40px 70px;
+}
+
+.heroq-left h1{
+  font-size:38px;
+}
+
+.heroq-left p.sub{
+  font-size:17px;
+}
+
+.heroq-card{
+  max-width:520px;
+  margin:auto;
+}
+
+}
+
+/* ========================= */
+/* 💻 DESKTOP (1024px+) */
+/* ========================= */
+
+@media (min-width:1024px){
+
+.heroq-section{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  align-items:center;
+  padding:120px 6vw 70px;
+  gap:60px;
+}
+
+.heroq-left{
+  text-align:left;
+}
+
+.heroq-left h1{
+  font-size:48px;
+}
+
+.heroq-left p.sub{
+  font-size:18px;
+}
+
+.heroq-card{
+  justify-self:end;
+}
+
+}
+
+/* ================= POPUP ================= */
+
+.form-popup{
+  position:fixed;
+  top:25px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:12px 24px;
+  border-radius:8px;
+  color:#fff;
+  font-weight:700;
+  z-index:9999;
+}
+
+.form-popup.success{
+  background:#2ecc71;
+}
+
+.form-popup.error{
+  background:#e74c3c;
 }
 
 `;
