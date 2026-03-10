@@ -707,7 +707,7 @@ function WorkProcess() {
             <div className="sps-step-num">1</div>
           </div>
           <h4>Get a Quote</h4>
-          <p>Contact SPS Packers and Movers for a free customized quote.</p>
+          <p>Contact Chennailal Packers and Movers for a free customized quote.</p>
         </div>
 
         <div className="sps-step">

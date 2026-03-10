@@ -83,9 +83,9 @@ export default function Footer() {
 
         {/* ABOUT */}
         <div>
-          <h3>SPS Packers & Movers</h3>
+          <h3>Chennailal Packers & Movers</h3>
           <p>
-            SPS Packers & Movers provides safe, reliable, and professional
+            Chennailal Packers & Movers provides safe, reliable, and professional
             relocation services for homes, offices, and commercial moves
             across India.
           </p>
@@ -117,14 +117,14 @@ export default function Footer() {
         <div>
           <h4><Link to="/contact">Contact</Link></h4>
           <p>📞 93610 46387</p>
-          <p>📧 info@spspackers.com</p>
+          <p>📧 info@chennailalpackers.com</p>
           <p>📍 India</p>
         </div>
 
       </div>
 
       <div className="sps-footer-bottom">
-        © {new Date().getFullYear()} SPS Packers & Movers. All rights reserved.
+        © {new Date().getFullYear()} Chennailal Packers & Movers. All rights reserved.
       </div>
     </footer>
   );
