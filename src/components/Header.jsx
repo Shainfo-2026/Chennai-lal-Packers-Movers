@@ -220,6 +220,7 @@ export default function Header() {
         <Link to="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
         <Link to="/about" className={isActive("/about") ? "active" : ""} onClick={() => setOpen(false)}>About</Link>
         <Link to="/services" className={isActive("/services") ? "active" : ""} onClick={() => setOpen(false)}>Services</Link>
+        <Link to="/servicespage" className={isActive("/servicespage") ? "active" : ""} onClick={() => setOpen(false)}>Shifting Services</Link>
 
         {/* COURSES DROPDOWN */}
         {/* <div className="sps-dropdown">

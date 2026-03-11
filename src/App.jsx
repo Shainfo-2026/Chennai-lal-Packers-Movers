@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Footer from "./components/Footer";
 import AssistantPopup from "./components/AssistantPopup";
 import ScrollToTop from "./components/ScrollToTop";
+import LandingPage from "./pages/LandingPage";
 // import BlogDetails from "./pages/BlogDetails";
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
           {/* <Route path="/courses/:courseId" element={<Courses />} /> */}
+       
+        <Route path="/servicespage" element={<LandingPage />} />
+      
         <Route path="/contact" element={<Contact />} />
          <Route path="/blog" element={<Blog />} />
          {/* <Route path="/blog/:id" element={<BlogDetails />} /> */}
