@@ -6,12 +6,13 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 // import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+
 import Footer from "./components/Footer";
 import AssistantPopup from "./components/AssistantPopup";
 import ScrollToTop from "./components/ScrollToTop";
 import LandingPage from "./pages/LandingPage";
 // import BlogDetails from "./pages/BlogDetails";
+import MasonryBlog from "./pages/Blog";
 
 function App() {
   return (
@@ -29,7 +30,10 @@ function App() {
         <Route path="/servicespage" element={<LandingPage />} />
       
         <Route path="/contact" element={<Contact />} />
-         <Route path="/blog" element={<Blog />} />
+<Route path="/blog" element={<MasonryBlog key="list" />} />
+<Route path="/blog/:id" element={<MasonryBlog key="details" />} />
+   
+  
          {/* <Route path="/blog/:id" element={<BlogDetails />} /> */}
       </Routes>
         <WhatsAppFloat />

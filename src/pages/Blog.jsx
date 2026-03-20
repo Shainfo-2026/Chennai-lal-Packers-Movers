@@ -1,11 +1,21 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 import { useEffect, useState } from "react";
 
+const createSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")   // remove special chars
+    .trim()
+    .replace(/\s+/g, "-");          // spaces → -
+};
+
 export default function MasonryBlog() {
 const navigate = useNavigate();
-  const [selectedBlog, setSelectedBlog] = useState(null);
+const { id: slug } = useParams();
+const isListPage = !slug;
+  // const [selectedBlog, setSelectedBlog] = useState(null);
 
   /* ================= BLOG DATA (ID BASED) ================= */
 
@@ -788,6 +798,9 @@ const navigate = useNavigate();
   
 
   ];
+const selectedBlog = blogs.find(
+  (b) => createSlug(b.title) === slug
+);
 
   /* ================= ANIMATION ================= */
 
@@ -808,19 +821,28 @@ const navigate = useNavigate();
 
   /* ================= SINGLE BLOG VIEW ================= */
 
-  if (selectedBlog) {
+// if (slug && selectedBlog === undefined) {
+//   return (
+//     <h2 style={{ padding: "100px", textAlign: "center" }}>
+//       Blog not found
+//     </h2>
+//   );
+// }
+
+ if (slug && selectedBlog) {
     return (
       <>
         <section className="single-blog-wrapper">
           <div className="single-layout">
 
             <div className="single-main">
-              <button
+<Link
+  to="/blog"
   className="back-btn"
-  onClick={() => navigate("/blog")}
+  onClick={() => window.scrollTo(0, 0)}
 >
   ← Back to Blogs
-</button>
+</Link>
 
               <h1>{selectedBlog.title}</h1>
 
@@ -899,7 +921,7 @@ const navigate = useNavigate();
     ? "medium"
     : ""
 }`}
-              onClick={() => setSelectedBlog(blog)}
+              onClick={() => navigate(`/blog/${createSlug(blog.title)}`)}
             >
               <div className="card-image">
                 <img src={blog.image} alt={blog.title} />
