@@ -40,6 +40,21 @@ export default function ContactPage() {
       setLoading(false);
       setSuccess(true);
 
+const message = `🚚 New Moving Enquiry
+
+👤 Name: ${form.name}
+📞 Phone: ${form.phone}
+📍 From: ${form.from}
+📍 To: ${form.to}
+📦 Service: ${form.service}
+
+Please contact the customer ASAP.`;
+
+  const phoneNumber = "919361046387";
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
       setForm({
         name: "",
         phone: "",
