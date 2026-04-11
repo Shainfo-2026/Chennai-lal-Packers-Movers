@@ -21,6 +21,123 @@ const isListPage = !slug;
 
   const blogs = [
 {
+  id: "id19",
+  title: "How Safety Matches Manufacturers Help Importers Stay Compliant in 2026",
+  image: "/images/blog199.jpg",
+  date: "11 Apr 2026",
+  content: `
+
+<h2>Introduction</h2>
+
+<p>Every year, millions of dollars worth of matches are held at customs — not because of price, but because of missing compliance paperwork. This is where reliable safety matches manufacturers play a critical role in global trade.</p>
+
+<p>Importers across regions like Europe, the United States, the Middle East, and Southeast Asia face strict fire safety regulations. Without proper certifications and documentation, shipments can be delayed, rejected, or even fined.</p>
+
+<h2>Why Fire Safety Compliance Is Critical for Importers</h2>
+
+<p>Fire safety compliance is not just a legal requirement — it directly impacts business operations and reputation.</p>
+
+<ul>
+  <li>Customs rejection and shipment delays</li>
+  <li>Financial penalties and recall costs</li>
+  <li>Loss of trust from distributors and retailers</li>
+  <li>Damage to brand reputation</li>
+</ul>
+
+<p>Manufacturers today are not just suppliers — they are compliance partners helping importers meet global standards.</p>
+
+<h2>How Safety Matches Manufacturers Support Compliance</h2>
+
+<ul>
+  <li>Providing ISO 1264 and CE certifications</li>
+  <li>Offering MSDS / SDS documentation</li>
+  <li>Conducting lab testing via SGS, Intertek, etc.</li>
+  <li>Ensuring child-safe and compliant packaging</li>
+  <li>Maintaining strict quality control processes</li>
+</ul>
+
+<h2>Compliance Checklist — What to Ask Your Manufacturer</h2>
+
+<p>Use this checklist before placing your next bulk order:</p>
+
+<div class="table-wrapper">
+<table class="compliance-table">
+  <thead>
+    <tr>
+      <th>Compliance Checkpoint</th>
+      <th>Required</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ISO 1264 / EN standard certification</td>
+      <td>Yes</td>
+      
+    </tr>
+    <tr>
+      <td>CE marking (for EU imports)</td>
+      <td>EU only</td>
+      
+    </tr>
+    <tr>
+      <td>BIS / country-specific certification</td>
+      <td>Market dependent</td>
+      
+    </tr>
+    <tr>
+      <td>Lab test reports (SGS / Bureau Veritas)</td>
+      <td>Yes</td>
+      
+    </tr>
+    <tr>
+      <td>MSDS / SDS for chemical safety</td>
+      <td>Yes</td>
+    
+    </tr>
+    <tr>
+      <td>Child-resistant packaging confirmation</td>
+      <td>Yes</td>
+     
+    </tr>
+    <tr>
+      <td>Country-of-origin certificate</td>
+      <td>Yes</td>
+     
+    </tr>
+    <tr>
+      <td>Multilingual labelling available</td>
+      <td>Recommended</td>
+    
+    </tr>
+    <tr>
+      <td>Pre-shipment inspection support</td>
+      <td>Recommended</td>
+   
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>What to Look for in a Compliance-Ready Manufacturer</h2>
+
+<ul>
+  <li>International certifications (ISO, CE, BIS)</li>
+  <li>Complete documentation support</li>
+  <li>In-house testing facilities</li>
+  <li>Experience in export markets</li>
+  <li>Custom packaging and labeling options</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>In today’s global trade environment, compliance is not optional — it is essential. The right safety matches manufacturer does more than supply products; they reduce risk, ensure smooth customs clearance, and support long-term business growth.</p>
+
+<p><strong><a href="/contact">Contact us today to request samples and compliance documents for your next bulk order.</a></strong></p>
+
+`
+},
+    {
   id: "id18",
   title: "Planning to Shift? Read This Before Hiring Packers and Movers in Chennai",
   image: "/images/planblog.jpg",
@@ -2053,6 +2170,54 @@ const styles = `
     font-size:18px;
   }
 }
+
+/* ===== Compliance Table ===== */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.compliance-table {
+  width: 100%;
+  min-width: 600px; /* makes scroll on mobile */
+  border-collapse: collapse;
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.compliance-table thead {
+  background-color: #ff6b00;
+  color: #fff;
+}
+
+.compliance-table th,
+.compliance-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.compliance-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.compliance-table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Optional: smoother scroll */
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
 `;
 
 
