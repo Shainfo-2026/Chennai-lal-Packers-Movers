@@ -27,7 +27,7 @@ function App() {
         <Route path="/services" element={<Services />} />
           {/* <Route path="/courses/:courseId" element={<Courses />} /> */}
        
-        <Route path="/servicespage" element={<LandingPage />} />
+        <Route path="/shiftingservices" element={<LandingPage />} />
       
         <Route path="/contact" element={<Contact />} />
 <Route path="/blog" element={<MasonryBlog key="list" />} />
