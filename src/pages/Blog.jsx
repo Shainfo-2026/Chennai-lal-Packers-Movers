@@ -21,6 +21,129 @@ const isListPage = !slug;
 
   const blogs = [
 {
+  id: "id20",
+  title: "Ultimate Checklist for Home Relocation in Chennai",
+  image: "/images/bloogc20.jpg",
+  date: "16 Apr 2026",
+  content: `
+
+<h2>Introduction</h2>
+
+<p>Relocating your home in Chennai can feel overwhelming without proper planning. From packing your belongings to coordinating transport and settling into your new space, every step requires attention. A well-structured checklist can make your move smooth, stress-free, and efficient.</p>
+
+<p>Whether you're moving within the city or relocating from another place, this ultimate checklist will guide you through every stage of your home shifting journey.</p>
+
+<h2>Pre-Move Planning (2–4 Weeks Before)</h2>
+
+<ul>
+  <li>Create a moving timeline and checklist</li>
+  <li>Sort and declutter unwanted items</li>
+  <li>Research and finalize a reliable packers and movers service</li>
+  <li>Request cost estimates and compare quotes</li>
+  <li>Inform your landlord (if applicable)</li>
+  <li>Start collecting packing materials (boxes, tape, labels)</li>
+</ul>
+
+<h2>Packing Essentials (1–2 Weeks Before)</h2>
+
+<ul>
+  <li>Pack non-essential items first (books, decor, seasonal items)</li>
+  <li>Label all boxes clearly with room names</li>
+  <li>Use bubble wrap for fragile items</li>
+  <li>Keep important documents in a separate folder</li>
+  <li>Prepare an essentials bag (clothes, toiletries, chargers)</li>
+</ul>
+
+<h2>Utility & Address Updates</h2>
+
+<ul>
+  <li>Update address in Aadhaar, bank, and official documents</li>
+  <li>Transfer or disconnect electricity, water, and gas connections</li>
+  <li>Update delivery apps and subscriptions</li>
+  <li>Inform friends, family, and workplace about your move</li>
+</ul>
+
+<h2>Moving Day Checklist</h2>
+
+<ul>
+  <li>Supervise packing and loading process</li>
+  <li>Double-check all rooms before leaving</li>
+  <li>Ensure fragile items are handled carefully</li>
+  <li>Keep valuables and documents with you</li>
+  <li>Confirm new house keys and access</li>
+</ul>
+
+<h2>Post-Move Setup</h2>
+
+<ul>
+  <li>Inspect all items for damages</li>
+  <li>Unpack essentials first</li>
+  <li>Set up kitchen and bedroom</li>
+  <li>Check utility connections</li>
+  <li>Dispose of packing materials responsibly</li>
+</ul>
+
+<h2>Quick Relocation Checklist Table</h2>
+
+<div class="table-wrapper">
+<table class="compliance-table">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hire packers and movers</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Declutter home</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Pack belongings</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Update address</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Utility transfer</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Final house inspection</td>
+      <td>Pending</td>
+    </tr>
+    <tr>
+      <td>Unpacking and setup</td>
+      <td>Pending</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Pro Tips for a Smooth Move in Chennai</h2>
+
+<ul>
+  <li>Avoid peak traffic hours while scheduling your move</li>
+  <li>Plan your move early morning or late evening</li>
+  <li>Check weather conditions (especially during monsoon)</li>
+  <li>Choose experienced movers familiar with Chennai routes</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>Home relocation doesn't have to be stressful when you have a clear plan. Following this checklist ensures that nothing important is missed and your transition is smooth.</p>
+
+<p><strong><a href="/contact">Contact us today for professional home relocation services in Chennai and make your move hassle-free.</a></strong></p>
+
+`
+},
+    {
   id: "id19",
   title: "How Safety Matches Manufacturers Help Importers Stay Compliant in 2026",
   image: "/images/blog199.jpg",

@@ -2862,24 +2862,43 @@ export default function About() {
       templateParams,
       "yxT-hRvX41RhpOdfZ"
     )
-    .then(() => {
+  .then(() => {
 
-      setLoading(false);
-      setPopup("success");
+  setLoading(false);
+  setPopup("success");
 
-      setForm({
-        name: "",
-        phone: "",
-        from: "",
-        to: "",
-        service: ""
-      });
+  // ✅ WhatsApp Message
+  const message = `🚚 New Moving Enquiry
 
-      setTimeout(() => {
-        setPopup("");
-      }, 3000);
+👤 Name: ${form.name}
+📞 Phone: ${form.phone}
+📍 From: ${form.from}
+📍 To: ${form.to}
+📦 Service: ${form.service}
 
-    })
+Please contact the customer ASAP.`;
+
+  const phoneNumber = "919361046387";
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // ✅ Open WhatsApp
+  window.open(whatsappURL, "_blank");
+
+  // ✅ Reset form
+  setForm({
+    name: "",
+    phone: "",
+    from: "",
+    to: "",
+    service: ""
+  });
+
+  setTimeout(() => {
+    setPopup("");
+  }, 3000);
+
+})
     .catch((error) => {
 
       console.log(error);
