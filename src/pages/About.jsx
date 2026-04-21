@@ -2,18 +2,18 @@ import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-import MissionVision from "../components/about/MissionVision";
-import ChooseWe from "../components/about/ChooseWe";
-import WhyChooseUsSection from "../components/about/WhyChooseUsSection";
-import WhyDifferent from "../components/about/WhyDifferent";
-import WhyChooseSPS from "../components/about/WhyChooseSPS";
-import AwardsStripDark from "../components/about/AwardsStripDark";
-import KeyHighlights from "../components/about/KeyHighlights";
-import StatsWaveStrip from "../components/about/StatsWaveStrip";
-import ShiftingProcess from "../components/about/ShiftingProcess";
-import AboutSection from "../components/about/AboutSection";
-import Testimonials from "../components/about/Testimonials";
-import KeynoteTeamSection from "../components/about/KeynoteTeamSection";
+import MissionVision from "../components/About/MissionVision";
+import ChooseWe from "../components/About/ChooseWe";
+import WhyChooseUsSection from "../components/About/WhyChooseUsSection";
+import WhyDifferent from "../components/About/WhyDifferent";
+import WhyChooseSPS from "../components/About/WhyChooseSPS";
+import AwardsStripDark from "../components/About/AwardsStripDark";
+import KeyHighlights from "../components/About/KeyHighlights";
+import StatsWaveStrip from "../components/About/StatsWaveStrip";
+import ShiftingProcess from "../components/About/ShiftingProcess";
+import AboutSection from "../components/About/AboutSection";
+import Testimonials from "../components/About/Testimonials";
+import KeynoteTeamSection from "../components/About/KeynoteTeamSection";
 
 import emailjs from "@emailjs/browser";
 
