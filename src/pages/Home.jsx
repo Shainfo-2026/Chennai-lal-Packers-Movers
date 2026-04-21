@@ -2345,7 +2345,10 @@ will-change: transform;
           <meta
             name="description"
             content="Need reliable packers and movers in Chennai? We pack, load, and deliver on time. Experts in local shifts. Get instant quote. Call us!"
+            
           />
+          <link rel="canonical" href="https://www.chennailalpackersmovers.com/" />
+
         </Helmet>
 
       <section className="hero-container" ref={heroRef}>

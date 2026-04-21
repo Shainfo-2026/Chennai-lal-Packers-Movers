@@ -167,6 +167,7 @@ export default function Services() {
             name="description"
             content="Top Chennai packers and movers services for office moves. Expert unpacking and setup. Protect your goods every step. Get instant estimates now! "
           />
+         <link rel="canonical" href="https://www.chennailalpackersmovers.com/services" />
         </Helmet>
 
 

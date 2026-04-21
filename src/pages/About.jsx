@@ -381,6 +381,7 @@ html,body{
             content="Get to know Chennai Lal Packers Movers, Chennai's top choice for hassle-free packing and shifting. Our story shows proven care for your belongings. Relocate with ease call now!
 "
           />
+          <link rel="canonical" href="https://www.chennailalpackersmovers.com/about" />
         </Helmet>
 
       {popup === "success" && (
