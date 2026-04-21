@@ -203,12 +203,12 @@ function WhatWeProvide() {
   }, []);
 
   const services = [
-    { title: "House Shifting", img: "/images/bgserv/bghousemini.png" },
-     { title: "Commercial Moves", img: "/images/bgserv/bgcommmini.png" },
-         { title: "Office Shifting", img: "/images/bgserv/offs.png" },
-    { title: "Transportation", img: "/images/bgserv/transmini.png" },
-    { title: "Godown Shifting", img: "/images/bgserv/godownmin.png" },
-    { title: "AC Installation", img: "/images/bgserv/bgacmini.png" },
+    { title: "House Shifting", img: "/images/bgserv/bghousemini.webp" },
+     { title: "Commercial Moves", img: "/images/bgserv/bgcommmini.webp" },
+         { title: "Office Shifting", img: "/images/bgserv/offs.webp" },
+    { title: "Transportation", img: "/images/bgserv/transmini.webp" },
+    { title: "Godown Shifting", img: "/images/bgserv/godownmin.webp" },
+    { title: "AC Installation", img: "/images/bgserv/bgacmini.webp" },
 
 
 
@@ -481,7 +481,7 @@ function WhyChooseUsSection() {
         />
 
         <img
-          src="/images/LEFTTRUCK.jpg"
+          src="/images/LEFTTRUCK.webp"
           alt="Safe Transportation"
           className="why-small-img"
         />

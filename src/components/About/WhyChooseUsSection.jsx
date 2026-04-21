@@ -1,9 +1,4 @@
-
-
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import emailjs from "@emailjs/browser";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function WhyChooseUsSection() {
 
@@ -71,7 +66,7 @@ export default function WhyChooseUsSection() {
   border-radius:18px;
   box-shadow:0 30px 60px rgba(0,0,0,0.25);
   border:6px solid #fff;
-  animation:floatImg 5s ease-in-out infinite;
+  animation:none;
 }
 
 @keyframes floatImg{
@@ -217,16 +212,24 @@ export default function WhyChooseUsSection() {
       
       <div className="why-left">
         <img
-          src="/images/tow.webp"
-          alt="Relocation team"
-          className="why-main-img"
-        />
+  src="/images/tow.webp"
+  width="620"
+  height="420"
+  loading="lazy"
+  decoding="async"
+  alt="Relocation team"
+  className="why-main-img"
+/>
 
         <img
-          src="/images/LEFTTRUCK.webp"
-          alt="Safe Transportation"
-          className="why-small-img"
-        />
+  src="/images/LEFTTRUCK.webp"
+  width="380"
+  height="260"
+  loading="lazy"
+  decoding="async"
+  alt="Safe Transportation"
+  className="why-small-img"
+/>
       </div>
 
       <div className="why-right">

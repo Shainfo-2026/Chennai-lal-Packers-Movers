@@ -1,9 +1,4 @@
-
-
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import emailjs from "@emailjs/browser";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 
 export default function KeyHighlights() {

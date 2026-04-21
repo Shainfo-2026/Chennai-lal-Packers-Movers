@@ -1,9 +1,4 @@
-
-
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import emailjs from "@emailjs/browser";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 
 export default function WhyChooseSPS() {
@@ -27,9 +22,9 @@ export default function WhyChooseSPS() {
 
 /* ===== SECTION ===== */
 .sps-why{
-  // padding:110px 6vw;
+  /* padding:110px 6vw; */
   font-family:Inter,system-ui;
-  // background:#FFFFFF;
+  
   overflow:hidden;
 }
 

@@ -1,7 +1,4 @@
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import emailjs from "@emailjs/browser";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function ChooseWe() {
 
@@ -118,7 +115,7 @@ export default function ChooseWe() {
   display:block;
   box-shadow:0 25px 55px rgba(0,0,0,0.15);
   transition:0.5s ease;
-  animation:floatImg 5s ease-in-out infinite;
+ animation:none;
 }
 
 /* Floating animation */
@@ -214,7 +211,14 @@ export default function ChooseWe() {
 
         {/* RIGHT SIDE IMAGE */}
         <div className="choosewe-right">
-          <img src="/images/bgserv/hiremini.webp" alt="Packers and Movers" />
+          <img
+  src="/images/bgserv/hiremini.webp"
+  width="550"
+  height="420"
+  loading="lazy"
+  decoding="async"
+  alt="Packers and Movers"
+/>
         </div>
 
       </div>

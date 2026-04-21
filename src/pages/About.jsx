@@ -486,7 +486,7 @@ html,body{
       <WhyChooseUsSection />
       <MissionVision />
       <ChooseWe />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div style={{ minHeight: "1800px" }}></div>}>
       <WhyDifferent />
       <KeynoteTeamSection />
       <AboutSection />

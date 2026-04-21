@@ -1,8 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
 
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import emailjs from "@emailjs/browser";
-import React, { useEffect, useState, useRef } from "react";
 
 
 export default function AboutSection() {
@@ -66,8 +63,7 @@ export default function AboutSection() {
   border-radius: 22px;
   border: 6px solid #062242;
   box-shadow:0 25px 60px rgba(6,34,66,0.25);
-  animation: floatSmall 4s ease-in-out infinite;
-}
+animation:none;}
 
 .about-small-img img {
   width: 100%;
@@ -234,16 +230,24 @@ export default function AboutSection() {
       <div className="about-left">
         <div className="about-main-img">
           <img
-            src="images/about/best2.webp"
-            alt="Relocation team"
-          />
+  src="images/about/best2.webp"
+  width="620"
+  height="420"
+  loading="lazy"
+  decoding="async"
+  alt="Relocation team"
+/>
         </div>
 
         <div className="about-small-img">
           <img
-            src="images/about/aboutbest.webp"
-            alt="Packing service"
-          />
+  src="images/about/aboutbest.webp"
+  width="280"
+  height="320"
+  loading="lazy"
+  decoding="async"
+  alt="Packing service"
+/>
         </div>
       </div>
 
