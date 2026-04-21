@@ -1,21 +1,54 @@
-import React, { useEffect, useState, useRef } from "react";
+
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import React, { useEffect, useState, useRef, lazy, Suspense } from "react";
 
+
+import emailjs from "@emailjs/browser";
+
+/* TOP SECTIONS - normal load */
 import MissionVision from "../components/About/MissionVision";
 import ChooseWe from "../components/About/ChooseWe";
 import WhyChooseUsSection from "../components/About/WhyChooseUsSection";
-import WhyDifferent from "../components/About/WhyDifferent";
-import WhyChooseSPS from "../components/About/WhyChooseSPS";
-import AwardsStripDark from "../components/About/AwardsStripDark";
-import KeyHighlights from "../components/About/KeyHighlights";
-import StatsWaveStrip from "../components/About/StatsWaveStrip";
-import ShiftingProcess from "../components/About/ShiftingProcess";
-import AboutSection from "../components/About/AboutSection";
-import Testimonials from "../components/About/Testimonials";
-import KeynoteTeamSection from "../components/About/KeynoteTeamSection";
 
-import emailjs from "@emailjs/browser";
+/* BELOW FOLD SECTIONS - lazy load */
+const WhyDifferent = lazy(() =>
+  import("../components/About/WhyDifferent")
+);
+
+const WhyChooseSPS = lazy(() =>
+  import("../components/About/WhyChooseSPS")
+);
+
+const AwardsStripDark = lazy(() =>
+  import("../components/About/AwardsStripDark")
+);
+
+const KeyHighlights = lazy(() =>
+  import("../components/About/KeyHighlights")
+);
+
+const StatsWaveStrip = lazy(() =>
+  import("../components/About/StatsWaveStrip")
+);
+
+const ShiftingProcess = lazy(() =>
+  import("../components/About/ShiftingProcess")
+);
+
+const AboutSection = lazy(() =>
+  import("../components/About/AboutSection")
+);
+
+const Testimonials = lazy(() =>
+  import("../components/About/Testimonials")
+);
+
+const KeynoteTeamSection = lazy(() =>
+  import("../components/About/KeynoteTeamSection")
+);
+
+
 
 
 
@@ -453,6 +486,7 @@ html,body{
       <WhyChooseUsSection />
       <MissionVision />
       <ChooseWe />
+      <Suspense fallback={null}>
       <WhyDifferent />
       <KeynoteTeamSection />
       <AboutSection />
@@ -462,6 +496,7 @@ html,body{
       <ShiftingProcess />
       <KeyHighlights />
       <Testimonials />
+      </Suspense>
 
     </>
   );
