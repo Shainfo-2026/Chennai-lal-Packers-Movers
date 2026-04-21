@@ -1,10 +1,10 @@
-;import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [courseOpen, setCourseOpen] = useState(false);
   const location = useLocation();
+
   useEffect(() => {
     const css = `
 
@@ -15,7 +15,7 @@ export default function Header() {
   left:0;
   width:100%;
   height:75px;
-  background: linear-gradient(90deg, #15304D 0%, #486C85 100%);
+  background:linear-gradient(90deg,#15304D 0%,#486C85 100%);
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -31,7 +31,6 @@ export default function Header() {
   align-items:center;
   gap:12px;
   text-decoration:none;
-  z-index:10001;
 }
 
 .sps-logo img{
@@ -55,104 +54,43 @@ export default function Header() {
   align-items:center;
 }
 
-.sps-nav a,
-.sps-dropdown-btn{
+.sps-nav a{
   text-decoration:none;
   font-weight:600;
   color:#ffffff;
   font-size:15px;
-  position:relative;
-  cursor:pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:0.3s ease;
 }
 
 .sps-nav a:hover,
-.sps-dropdown-btn:hover{
-  color:#c7dfff;
-}
-
 .sps-nav a.active{
   color:#c7dfff;
-}
-
-/* ================= DROPDOWN ================= */
-.sps-dropdown{
-  position:relative;
-}
-
-.sps-dropdown-menu{
-  position:absolute;
-  top:45px;
-  left:0;
-  width:320px;
-  background:#ffffff;
-  border-radius:10px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-  display:none;
-  flex-direction:column;
-  overflow:hidden;
-  animation:fadeIn 0.25s ease;
-}
-
-.sps-dropdown-menu.show{
-  display:flex;
-}
-
-.sps-dropdown-menu a{
-  padding:14px 18px;
-  font-size:14px;
-  color:#15304D;
-  border-bottom:1px solid #eee;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.sps-dropdown-menu a:last-child{
-  border-bottom:none;
-}
-
-.sps-dropdown-menu a:hover{
-  background:#f2f6ff;
-}
-
-/* animation */
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(8px);}
-  to{opacity:1; transform:translateY(0);}
 }
 
 /* ================= CTA ================= */
 .sps-right{
   display:flex;
   align-items:center;
-  gap:18px;
-  z-index:10001;
 }
 
 .sps-cta{
-  background: linear-gradient(90deg, #ffffff, #c7dfff);
+  background:linear-gradient(90deg,#ffffff,#c7dfff);
   color:#15304D;
   padding:10px 18px;
   border-radius:10px;
   font-weight:800;
   text-decoration:none;
   font-size:14px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  border:none;
-}
-
-.sps-cta:hover{
-  box-shadow:0 0 18px rgba(199,223,255,0.8);
 }
 
 /* ================= HAMBURGER ================= */
 .sps-hamburger{
-  max-height:0;
-overflow:hidden;
-transition:0.4s ease;
+  display:none;
   font-size:32px;
   color:#ffffff;
   cursor:pointer;
+  line-height:1;
+  user-select:none;
 }
 
 /* ================= MOBILE ================= */
@@ -163,39 +101,34 @@ transition:0.4s ease;
     top:75px;
     left:0;
     width:100%;
-    background: linear-gradient(180deg, #15304D, #486C85);
+    background:linear-gradient(180deg,#15304D,#486C85);
     flex-direction:column;
     align-items:center;
     gap:22px;
     padding:30px 0;
     display:none;
+    z-index:999;
   }
 
   .sps-nav.open{
     display:flex;
   }
 
-  .sps-dropdown-menu{
-    position:static;
-    width:90%;
-    background:#ffffff;
-  }
-
   .sps-hamburger{
     display:block;
-    position:absolute;
-    right:20px;
-    top:28px;
   }
 
   .sps-right{
     display:none;
   }
+
+  .sps-logo-text{
+    font-size:15px;
+  }
 }
 
-/* PAGE OFFSET */
 .page{
- padding-top:75px;
+  padding-top:75px;
 }
 
 `;
@@ -211,13 +144,15 @@ transition:0.4s ease;
 
       {/* LOGO */}
       <Link to="/" className="sps-logo">
-        <img src="/images/loo.png"   src="/images/loo.webp"
-  width="160"
-  height="55"
-  loading="eager"
-  fetchPriority="high"
-  decoding="async"
-  alt="Chennai Lal Packers Movers Logo" />
+        <img
+          src="/images/loo.webp"
+          width="160"
+          height="55"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          alt="Chennai Lal Packers Movers Logo"
+        />
         <div className="sps-logo-text">
           CHENNAI LAL
         </div>
@@ -229,38 +164,25 @@ transition:0.4s ease;
         <Link to="/about" className={isActive("/about") ? "active" : ""} onClick={() => setOpen(false)}>About</Link>
         <Link to="/services" className={isActive("/services") ? "active" : ""} onClick={() => setOpen(false)}>Services</Link>
         <Link to="/shiftingservices" className={isActive("/shiftingservices") ? "active" : ""} onClick={() => setOpen(false)}>Shifting Services</Link>
-
-        {/* COURSES DROPDOWN */}
-        {/* <div className="sps-dropdown">
-          <div
-            className="sps-dropdown-btn"
-            onClick={() => setCourseOpen(!courseOpen)}
-          >
-            Courses ▾
-          </div>
-
-          <div className={`sps-dropdown-menu ${courseOpen ? "show" : ""}`}>
-            <Link to="/courses/smm" onClick={() => { setOpen(false); setCourseOpen(false); }}>
-               Digital Marketing Master (CDMM)
-            </Link>
-            <Link to="/courses/seo" onClick={() => { setOpen(false); setCourseOpen(false); }}>
-              Certified SEO Course
-            </Link>
-        
-          </div>
-        </div> */}
-
         <Link to="/contact" className={isActive("/contact") ? "active" : ""} onClick={() => setOpen(false)}>Contact</Link>
         <Link to="/blog" className={isActive("/blog") ? "active" : ""} onClick={() => setOpen(false)}>Blog</Link>
       </nav>
 
       {/* CTA */}
       <div className="sps-right">
-       <a href="tel:+919361046387" className="sps-cta"> Call Now</a>
+        <a href="tel:+919361046387" className="sps-cta">
+          Call Now
+        </a>
       </div>
 
       {/* MOBILE MENU ICON */}
-      <div className="sps-hamburger" onClick={() => setOpen(!open)}>☰</div>
+      <div
+        className="sps-hamburger"
+        onClick={() => setOpen(!open)}
+        aria-label="Menu"
+      >
+        {open ? "✕" : "☰"}
+      </div>
 
     </header>
   );
