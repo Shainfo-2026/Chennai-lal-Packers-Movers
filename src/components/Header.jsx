@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+;import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
@@ -14,14 +14,14 @@ export default function Header() {
   top:0;
   left:0;
   width:100%;
-  height:90px;
+  height:75px;
   background: linear-gradient(90deg, #15304D 0%, #486C85 100%);
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:0 6vw;
   font-family:Inter,system-ui;
-  z-index:9999;
+  z-index:1000;
   box-shadow:0 10px 30px rgba(21,48,77,0.35);
 }
 
@@ -63,7 +63,7 @@ export default function Header() {
   font-size:15px;
   position:relative;
   cursor:pointer;
-  transition:0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .sps-nav a:hover,
@@ -137,7 +137,7 @@ export default function Header() {
   font-weight:800;
   text-decoration:none;
   font-size:14px;
-  transition:0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   border:none;
 }
 
@@ -147,7 +147,9 @@ export default function Header() {
 
 /* ================= HAMBURGER ================= */
 .sps-hamburger{
-  display:none;
+  max-height:0;
+overflow:hidden;
+transition:0.4s ease;
   font-size:32px;
   color:#ffffff;
   cursor:pointer;
@@ -158,7 +160,7 @@ export default function Header() {
 
   .sps-nav{
     position:fixed;
-    top:90px;
+    top:75px;
     left:0;
     width:100%;
     background: linear-gradient(180deg, #15304D, #486C85);
@@ -193,7 +195,7 @@ export default function Header() {
 
 /* PAGE OFFSET */
 .page{
-  padding-top:90px;
+ padding-top:75px;
 }
 
 `;
@@ -209,7 +211,13 @@ export default function Header() {
 
       {/* LOGO */}
       <Link to="/" className="sps-logo">
-        <img src="/images/loo.png" alt="Chennai Lal Packers & Movers Logo" />
+        <img src="/images/loo.png"   src="/images/loo.webp"
+  width="160"
+  height="55"
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+  alt="Chennai Lal Packers Movers Logo" />
         <div className="sps-logo-text">
           CHENNAI LAL
         </div>
@@ -248,7 +256,7 @@ export default function Header() {
 
       {/* CTA */}
       <div className="sps-right">
-        <a href="tel:9361046387" className="sps-cta">Call Now</a>
+       <a href="tel:+919361046387" className="sps-cta"> Call Now</a>
       </div>
 
       {/* MOBILE MENU ICON */}

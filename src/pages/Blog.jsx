@@ -26,7 +26,7 @@ const isListPage = !slug;
   title: "From Doorstep to Destination: Your Complete Chennai Moving Handbook",
   metaTitle: "From Doorstep to Destination: Your Complete Chennai Moving Handbook | Chennai Lal Packers Movers",
   metaDescription: "Complete Chennai moving handbook covering packing, loading, transport, unpacking, moving costs, and expert relocation tips for a stress-free shift.",
-  image: "/images/blog232.png",
+  image: "/images/blog232.webp",
   date: "20 Apr 2026",
   content: `
 
@@ -189,7 +189,7 @@ const isListPage = !slug;
   title: "Top 10 Tips for Stress-Free House Shifting in Chennai",
   metaTitle: "Top 10 Tips for Stress-Free House Shifting in Chennai | Chennai Lal Packers Movers",
   metaDescription: "Discover the top 10 expert tips for stress-free house shifting in Chennai. Make your relocation smooth, safe, and hassle-free with trusted movers.",
-  image: "/images/blogitp.jpg",
+  image: "/images/blogitp.webp",
   date: "18 Apr 2026",
   content: `
 
@@ -366,7 +366,7 @@ const isListPage = !slug;
   title: "Ultimate Checklist for Home Relocation in Chennai",
   metaTitle:"Ultimate Checklist for Home Relocation in Chennai | Chennai Lal Packers Movers",
 metaDescription:"Planning to move home in Chennai? Follow this ultimate relocation checklist for stress-free shifting with Chennai Lal Packers Movers.",
-  image: "/images/bloogc20.jpg",
+  image: "/images/bloogc20.webp",
   date: "16 Apr 2026",
   content: `
 
@@ -491,7 +491,7 @@ metaDescription:"Planning to move home in Chennai? Follow this ultimate relocati
   title: "How Safety Matches Manufacturers Help Importers Stay Compliant in 2026",
   metaTitle:"Safety Matches Manufacturers Compliance Guide 2026",
 metaDescription:"Learn how safety matches manufacturers help importers stay compliant with certifications, customs rules, and packaging standards in 2026.",
-  image: "/images/blog199.jpg",
+  image: "/images/blog199.webp",
   date: "11 Apr 2026",
   content: `
 
@@ -610,7 +610,7 @@ metaDescription:"Learn how safety matches manufacturers help importers stay comp
   title: "Planning to Shift? Read This Before Hiring Packers and Movers in Chennai",
   metaTitle:"Before Hiring Packers and Movers in Chennai Read This Guide",
 metaDescription:"Planning to shift? Discover key tips before hiring packers and movers in Chennai for a safe and hassle-free relocation.",
-  image: "/images/planblog.jpg",
+  image: "/images/planblog.webp",
   date: "09 Apr 2026",
   content: `
 
@@ -709,7 +709,7 @@ metaDescription:"Planning to shift? Discover key tips before hiring packers and 
   title: "From Packing to Unpacking: Complete Moving Solutions in Chennai",
   metaTitle:"Complete Moving Solutions in Chennai | Packing to Unpacking",
 metaDescription:"From packing to unpacking, get complete moving solutions in Chennai with trusted relocation experts Chennai Lal Packers Movers.",
-  image: "/images/blogg.jpg",
+  image: "/images/blogg.webp",
   date: "08 Apr 2026",
   content: `
 
@@ -1096,7 +1096,7 @@ metaDescription:"Everything you need to know about transportation services in Ch
   title: "Packing Materials Used by Professional Movers",
   metaTitle:"Packing Materials Used by Professional Movers Chennai",
 metaDescription:"Learn what packing materials professional movers use to ensure safe and secure relocation in Chennai.",
-  image: "/images/blog14.jpg",
+  image: "/images/blog14.webp",
   date: "21 Mar 2026",
   content: `
 
@@ -1244,7 +1244,7 @@ metaDescription:"Learn what packing materials professional movers use to ensure 
   title: "Affordable Transportation Services for House Shifting in Chennai",
   metaTitle:"Affordable Transportation Services for House Shifting Chennai",
 metaDescription:"Need budget-friendly transport for house shifting in Chennai? Explore safe and affordable moving transportation services.",
-  image: "/images/blog13.jpg",
+  image: "/images/blog13.webp",
   date: "20 Mar 2026",
   content: `
 
@@ -1369,7 +1369,7 @@ metaDescription:"Need budget-friendly transport for house shifting in Chennai? E
   title: "Bike and Car Transport Services in Chennai Explained",
   metaTitle:"Bike and Car Transport Services in Chennai Explained",
 metaDescription:"Looking for bike or car transport in Chennai? Learn how vehicle shifting services work with safe handling and delivery.",
-  image: "/images/transblog.png",
+  image: "/images/transblog.webp",
   date: "19 Mar 2026",
   content: `
 
@@ -1462,7 +1462,7 @@ metaDescription:"Looking for bike or car transport in Chennai? Learn how vehicle
   title: "Office Relocation Services in Chennai – Complete Guide",
   metaTitle:"Office Relocation Services in Chennai Complete Guide",
 metaDescription:"Planning office shifting in Chennai? Read this complete guide for stress-free business relocation services.",
-  image: "/images/officeblog.jpg",
+  image: "/images/officeblog.webp",
   date: "18 Mar 2026",
   content: `
 
@@ -1556,7 +1556,7 @@ metaDescription:"Planning office shifting in Chennai? Read this complete guide f
   title: "The Ultimate Moving Checklist: Expert Tips from Chennai Movers and Packers",
   metaTitle:"Ultimate Moving Checklist Chennai Movers and Packers",
 metaDescription:"Use this expert moving checklist from Chennai movers and packers for a smooth and organized relocation.",
-  image: "/images/location.jpg",
+  image: "/images/location.webp",
   date : "14 March 2026",
   content: `
   <h2>The Ultimate Moving Checklist: Expert Tips from Chennai Movers and Packers</h2>
@@ -1613,7 +1613,7 @@ metaDescription:"Use this expert moving checklist from Chennai movers and packer
   title: "Minimizing Downtime: How Office Relocation Companies Ensure Smooth Business Transitions",
   metaTitle:"How Office Relocation Companies Reduce Downtime",
 metaDescription:"Learn how office relocation companies ensure smooth business transitions with minimal downtime during moves.",
-  image: "/images/time.jpg",
+  image: "/images/time.webp",
   date : "10 March 2026",
   content: `
   <h2>Minimizing Downtime: How Office Relocation Companies Ensure Smooth Business Transitions</h2>
@@ -1662,7 +1662,7 @@ metaDescription:"Learn how office relocation companies ensure smooth business tr
   title: "Decoding Home Shifting Charges in Chennai: A Complete Cost Guide for 2026",
   metaTitle:"Home Shifting Charges in Chennai Complete Cost Guide 2026",
 metaDescription:"Know home shifting charges in Chennai for 1BHK, 2BHK, and 3BHK moves. Full cost guide for 2026.",
-  image: "/images/four.jpg",
+  image: "/images/four.webp",
   date: "8 March 2026",
   content: `
   <h2>Decoding Home Shifting Charges in Chennai: A Complete Cost Guide for 2026</h2>
@@ -1732,7 +1732,7 @@ metaDescription:"Know home shifting charges in Chennai for 1BHK, 2BHK, and 3BHK 
   title: "Best Local Shifting Services in Chennai – Understanding the Moving Process, Costs and Benefits",
   metaTitle:"Best Local Shifting Services in Chennai Complete Guide",
 metaDescription:"Understand local shifting process, costs, and benefits with best movers and packers in Chennai.",
-  image: "/images/blog8.png",
+  image: "/images/blog8.webp",
   date: "6 Mar 2026",
   content: `
 
@@ -1813,7 +1813,7 @@ metaDescription:"Understand local shifting process, costs, and benefits with bes
   title: "Why Lal Packers and Movers Chennai is the Smart Choice for Packers and Movers in Chennai",
   metaTitle:"Why Lal Packers and Movers Chennai is Smart Choice",
 metaDescription:"Discover why Lal Packers and Movers Chennai is trusted for home shifting, office relocation, and safe transport.",
-  image: "/images/blog9.png",
+  image: "/images/blog9.webp",
   date: "3 Mar 2026",
   content: `
 
@@ -1888,7 +1888,7 @@ metaDescription:"Discover why Lal Packers and Movers Chennai is trusted for home
   title: "A Complete Guide to Relocating in Chennai with Lal Packers and Movers",
   metaTitle:"Complete Guide to Relocating in Chennai with Lal Packers Movers",
 metaDescription:"Planning relocation in Chennai? Read this complete guide with moving tips, costs, and expert support.",
-  image: "/images/blog10.png",
+  image: "/images/blog10.webp",
   date: "25 Feb 2026",
   content: `
 
@@ -1955,7 +1955,7 @@ metaDescription:"Planning relocation in Chennai? Read this complete guide with m
   title: "Reliable Packing and Moving Services – Lal Packers and Movers Chennai",
   metaTitle:"Reliable Packing and Moving Services Chennai",
 metaDescription:"Choose reliable packing and moving services in Chennai with trusted Lal Packers and Movers.",
-  image: "/images/blog44.png",
+  image: "/images/blog44.webp",
   date: "20 Feb 2026",
   content: `
   
@@ -2106,7 +2106,7 @@ metaDescription:"Affordable and secure home, office, and vehicle shifting servic
   title: "Trusted Home & Office Shifting Services in Chennai – Chennai Lal Packers & Movers",
   metaTitle:"Trusted Home Office Shifting Services Chennai",
 metaDescription:"Trusted home and office shifting services in Chennai with professional movers and secure transport.",
-  image: "/images/blog 2222.png",
+  image: "/images/blog 2222.webp",
   date : "28 Jan 2026",
   content: `
     <h2>Trusted Home & Office Shifting Services in Chennai – Chennai Lal Packers & Movers</h2>
@@ -2172,7 +2172,7 @@ metaDescription:"Trusted home and office shifting services in Chennai with profe
   title: "Best Packers and Movers in Chennai – Chennai Lal Packers & Movers",
   metaTitle:"Best Packers and Movers in Chennai | Chennai Lal Packers Movers",
 metaDescription:"Top-rated packers and movers in Chennai for home shifting, office relocation, and vehicle transport.",
-  image: "/images/blog221.png",
+  image: "/images/blog221.webp",
   date : "5 Jan 2026",
   content: `
       <h2>Best Packers and Movers in Chennai – Chennai Lal Packers & Movers</h2>

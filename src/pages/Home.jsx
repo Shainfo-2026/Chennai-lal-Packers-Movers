@@ -223,13 +223,13 @@ function AboutSlide() {
 
       <div className="sps-about-img">
   <img
-  src="/images/bgserv/setting.png"
-  width="600"
+  src="/images/bgserv/setting.webp"
+ width="600"
   height="400"
-   loading="eager"
+  loading="lazy"
+  fetchPriority="low"
   decoding="async"
- fetchPriority="low"
-  alt="Chennai Lal Packers and Movers Team"
+  alt="Chennai Lal Packers Movers Team"
 />
 </div>
 
@@ -467,12 +467,12 @@ function WhatWeProvide() {
   }, []);
 
   const services = [
-    { title: "House Shifting", img: "/images/bgserv/bghousemini.png" },
-     { title: "Commercial Moves", img: "/images/bgserv/bgcommmini.png" },
-         { title: "Office Shifting", img: "/images/bgserv/offs.png" },
-    { title: "Transportation", img: "/images/bgserv/transmini.png" },
-    { title: "Godown Shifting", img: "/images/bgserv/godownmin.png" },
-    { title: "AC Installation", img: "/images/bgserv/bgacmini.png" },
+    { title: "House Shifting", img: "/images/bgserv/bghousemini.webp" },
+     { title: "Commercial Moves", img: "/images/bgserv/bgcommmini.webp" },
+         { title: "Office Shifting", img: "/images/bgserv/offs.webp" },
+    { title: "Transportation", img: "/images/bgserv/transmini.webp" },
+    { title: "Godown Shifting", img: "/images/bgserv/godownmin.webp" },
+    { title: "AC Installation", img: "/images/bgserv/bgacmini.webp" },
 
 
 
@@ -505,7 +505,7 @@ function WhatWeProvide() {
 
   <img
     src={s.img}
-      loading="eager"
+      loading="lazy"
     decoding="async"
     fetchPriority="low"
     width="400"
@@ -1025,13 +1025,13 @@ function WhyyChooseUs() {
 
       <div className="why-img">
         <img
-  src="/images/bgserv/whymini.png"
+  src="/images/bgserv/whymini.webp"
   width="520"
   height="360"
-    loading="eager"
+ loading="lazy"
+  fetchPriority="low"
   decoding="async"
- fetchPriority ="low"
-  alt="Why Choose Chennai Lal Packers & Movers"
+  alt="Why Choose Chennai Lal Packers Movers"
 />
       </div>
 
@@ -1764,7 +1764,7 @@ function MovingRoutesStrip() {
 .routes-track {
   display:flex;
   width:max-content;
-  animation: scrollLeft 80s linear infinite;
+  animation: scrollLeft 140s linear infinite;
   will-change: transform;
 }
 
@@ -1799,7 +1799,7 @@ function MovingRoutesStrip() {
 /* ===== TABLET ===== */
 @media(max-width:900px){
   .routes-track {
-    animation: scrollLeft 45s linear infinite;
+    animation: scrollLeft 90s linear infinite;
   }
 }
 
@@ -2075,7 +2075,7 @@ function Testimonials() {
   src={testimonials[index].img}
   width="95"
   height="95"
-   loading="eager"
+   loading="lazy"
   decoding="async"
  fetchPriority="low"
   alt={testimonials[index].name}
@@ -2226,7 +2226,7 @@ will-change: transform;
 }
 
 .hero-outline{
-  // background:white;
+  /* background:white;*/
   padding-top:10px;
   border:2px solid #486C85;
   // color:#15304D;
@@ -2351,14 +2351,14 @@ will-change: transform;
       <section className="hero-container" ref={heroRef}>
 
         <div className="hero-img">
-          <img
-  src="/images/ggrgll.png"
+<img
+  src="/images/ggrgll.webp"
   width="520"
   height="420"
-  decoding="async"
-  fetchPriority="high"
   loading="eager"
-  alt="Chennai Lal Packers & Movers"
+  fetchPriority="high"
+  decoding="async"
+  alt="Chennai Lal Packers Movers"
 />
         </div>
 

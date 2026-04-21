@@ -475,7 +475,7 @@ function WhyChooseUsSection() {
       
       <div className="why-left">
         <img
-          src="/images/tow.jpg"
+          src="/images/tow.webp"
           alt="Relocation team"
           className="why-main-img"
         />

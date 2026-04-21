@@ -209,7 +209,7 @@ Please contact me with details.`;
    const services = [
     {
       title: "House Shifting",
-      img: "/images/bgserv/bghousemini.png",
+      img: "/images/bgserv/bghousemini.webp",
       desc: "We make home relocation seamless and stress-free using high-quality packing materials and modern equipment.",
       features: [
         "Pre-move survey and planning",
@@ -221,7 +221,7 @@ Please contact me with details.`;
     },
     {
       title: "Office Shifting",
-      img: "/images/bgserv/offs.png",
+      img: "/images/bgserv/offs.webp",
       desc: "Professional office relocation ensuring minimal downtime and safe IT equipment handling.",
       features: [
         "Minimal business disruption during relocation",
@@ -233,7 +233,7 @@ Please contact me with details.`;
     },
     {
       title: "Transportation",
-      img: "/images/bgserv/transmini.png",
+      img: "/images/bgserv/transmini.webp",
       desc: "Fast and reliable GPS-enabled transportation for safe and timely delivery.",
       features: [
         "Dedicated fleet of modern vehicles",
@@ -245,7 +245,7 @@ Please contact me with details.`;
     },
     {
       title: "AC Installation",
-      img: "/images/bgserv/bgacmini.png",
+      img: "/images/bgserv/bgacmini.webp",
       desc: "Expert AC dismantling, shifting and re-installation with complete safety.",
       features: [
         "New AC installation (Split & Window AC)",
@@ -257,7 +257,7 @@ Please contact me with details.`;
     },
     {
       title: "Godown Shifting",
-      img: "/images/bgserv/godownmin.png",
+      img: "/images/bgserv/godownmin.webp",
       desc: "Complete warehouse and inventory relocation with heavy equipment handling.",
       features: [
         "Inventory assessment and planning",
@@ -269,7 +269,7 @@ Please contact me with details.`;
     },
     {
       title: "Commercial Moves",
-      img: "/images/bgserv/bgcommmini.png",
+      img: "/images/bgserv/bgcommmini.webp",
       desc: "End-to-end commercial relocation solutions for businesses and industries.",
       features: [
         "Retail store relocations",
@@ -564,7 +564,7 @@ function ServicesIntro() {
           </div>
 
           <img
-            src="/images/ser/twopersons.jpg"
+            src="/images/ser/twopersons.webp"
             alt="Professional Moving Services"
           />
         </div>
@@ -785,7 +785,7 @@ function SkillSection() {
 
       {/* LEFT */}
       <div className="skill-images">
-        <img src="/images/expr.png" className="skill-img-1" alt="Packing Process" />
+        <img src="/images/expr.webp" className="skill-img-1" alt="Packing Process" />
       </div>
 
       {/* RIGHT */}

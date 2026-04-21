@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-
-export default function Footer() {
+import React from "react";
+ function Footer() {
   useEffect(() => {
     const css = `
 /* ================= FOOTER ================= */
@@ -78,49 +78,71 @@ export default function Footer() {
   }, []);
 
   return (
+  
     <footer className="sps-footer">
       <div className="sps-footer-grid">
 
         {/* ABOUT */}
         <div>
+          <img
+            src="/images/loo.webp"
+            width="150"
+            height="150"
+            loading="lazy"
+            decoding="async"
+            alt="Chennailal Packers & Movers Logo"
+            style={{ marginBottom: "5px" }}
+          />
+
           <h3>Chennailal Packers & Movers</h3>
+
           <p>
-            Chennailal Packers & Movers provides safe, reliable, and professional
-            relocation services for homes, offices, and commercial moves
-            across India.
+            Chennailal Packers & Movers provides safe, reliable, and
+            professional relocation services for homes, offices, and
+            commercial moves across India.
           </p>
         </div>
 
         {/* QUICK LINKS */}
-        <div>
+        <nav>
           <h4>Quick Links</h4>
+
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
           <Link to="/shiftingservices">Shifting Services</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/blog">Blog</Link>
-        </div>
+        </nav>
 
         {/* SERVICES */}
-        <div>
-          <h4> <Link to="/services">Services</Link></h4>
+        <nav>
+          <h4>Services</h4>
+
           <Link to="/services">House Shifting</Link>
           <Link to="/services">Office Relocation</Link>
           <Link to="/services">Vehicle Transportation</Link>
           <Link to="/services">Godown Shifting</Link>
           <Link to="/services">AC Installation</Link>
           <Link to="/services">Commercial Moves</Link>
-        
-        </div>
-  
-           
+        </nav>
+
         {/* CONTACT */}
         <div>
-          <h4><Link to="/contact">Contact</Link></h4>
-          <p>📞 93610 46387</p>
-          <p>📧 info@chennailalpackers.com</p>
-          <p>📍 India</p>
+          <h4>Contact</h4>
+
+          <a
+            href="tel:+919361046387"
+            aria-label="Call Chennai Lal Packers Movers"
+          >
+            📞 +91 93610 46387
+          </a>
+
+          <a href="mailto:info@chennailalpackers.com">
+            📧 info@chennailalpackers.com
+          </a>
+
+          <p>📍 Chennai, Tamil Nadu, India</p>
         </div>
 
       </div>
@@ -131,3 +153,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default React.memo(Footer);
