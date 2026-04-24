@@ -162,10 +162,10 @@ export default function Services() {
     <>
 
      <Helmet>
-          <title>Household Shifting Packers | ChennaiLal</title>
+          <title>Professional Shifting Services in Chennai - Chennai Lal Packers & Movers</title>
           <meta
             name="description"
-            content="Top Chennai packers and movers services for office moves. Expert unpacking and setup. Protect your goods every step. Get instant estimates now! "
+            content="Relocate with ease and efficiency with Chennai Lal Packers & Movers. Our team offers top-notch shifting services in Chennai to make your move stress-free. Contact us today! "
           />
          <link rel="canonical" href="https://www.chennailalpackersmovers.com/services" />
         </Helmet>

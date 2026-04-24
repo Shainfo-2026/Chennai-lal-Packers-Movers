@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 
 function WhatWeProvide() {
@@ -1618,13 +1618,13 @@ Service: ${form.service}
 
   return (
     <>
-      {/* <Helmet>
-        <title>Call Chennai Lal Relocation Experts</title>
+      <Helmet>
+        <title>Professional Shifting Services in Chennai - Chennai Lal Packers & Movers</title>
         <meta
           name="description"
-          content="Need help with packing in Chennai? Reach Chennai Lal Packers Movers via phone or email. Get instant quotes and start your smooth relocation right away."
+          content="Relocate with ease and efficiency with Chennai Lal Packers & Movers. Our team offers top-notch shifting services in Chennai to make your move stress-free. Contact us today!"
         />
-      </Helmet> */}
+      </Helmet>
 
       <section className="sps-contact" ref={sectionRef}>
         <div className="sps-contact-grid">
