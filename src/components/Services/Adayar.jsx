@@ -141,7 +141,7 @@ text-align:center;
 
 /* ================= PACKING ================= */
 .packing-section {
-  padding: 0px 6vw;
+  padding: 60px 6vw;
 }
 
 .packing-title {
@@ -150,7 +150,6 @@ text-align:center;
   color: var(--primary);
   margin-bottom: 30px;
   text-align:center;
- 
 }
 
 .packing-container {
@@ -280,7 +279,7 @@ text-align:center;
 
   .packing-title {
     font-size: 24px;
-     text-align: center;
+    text-align:center;
   }
 
   .why-grid {
@@ -306,7 +305,8 @@ text-align:center;
       {/* ===== TOP BANNER ===== */}
       <section className="madi-top">
        <h1 className="typing-text">
-Packers and Movers in Adyar 
+Packers & Movers
+in Adyar
 </h1>
       </section>
 
@@ -322,17 +322,15 @@ Packers and Movers in Adyar
   {/* RIGHT CONTENT */}
   <div className="madi-about-content">
 
-    <h2>Professional Packers and Movers in Madipakkam</h2>
+    <h2>Professional Packers and Movers in Adyar</h2>
 
     {/* <h4>Reliable, Safe & Hassle-Free Relocation Services</h4> */}
 
     <p>
-    Looking for reliable and professional packers and movers in Madipakkam? Chennailal Packers and Movers is your trusted partner for safe, efficient, and affordable relocation services. Whether you’re moving your home, office, or vehicle, we ensure a hassle-free experience with expert handling and timely delivery.
-    </p>
+Looking for dependable packers and movers in Adyar? Chennailal Packers and Movers offers professional relocation services designed to make your move smooth, secure, and stress-free. Whether you are shifting your home, office, or commercial space, our experienced team ensures every item is handled with care.    </p>
 
     <p>
-      Our trained team uses high-quality materials and proven techniques to guarantee the safety of your belongings. From careful packing to secure transportation, we handle every step with precision and care.
-    </p>
+We understand that moving can be overwhelming, which is why we provide end-to-end solutions—from packing and loading to transportation and unpacking—so you can focus on settling into your new space.    </p>
 
   </div>
 
@@ -356,16 +354,16 @@ Packers and Movers in Adyar
   {/* ===== CONTENT ===== */}
   <div className="madi-wave-content">
 
-    <h2>Trusted Transport Services in Madipakkam</h2>
+    <h2>Trusted Transport Services in Adyar</h2>
 
     <p>
-      At Chennailal Packers and Movers, we offer top-notch transport services in Madipakkam designed to meet diverse moving needs. Our modern fleet of vehicles and experienced drivers ensure your goods reach their destination safely and on time.
+     At Chennailal Packers and Movers, we provide high-quality packing solution in Adyar tailored to your specific needs. Our team uses premium packing materials such as bubble wrap, sturdy cartons, foam sheets, and protective coverings to ensure maximum safety of your belongings.
 
 
     </p>
 
     <p>
-    Whether it’s local shifting within Madipakkam or long-distance relocation, our transport solutions are tailored for reliability, speed, and cost-effectiveness.
+    Whether it’s delicate glassware, electronics, or heavy furniture, our packing specialists ensure everything is securely packed to prevent any damage during transit.
     </p>
 
   </div>
@@ -378,7 +376,7 @@ Packers and Movers in Adyar
 
   {/* HEADING (LEFT) */}
   <h2 className="packing-title">
-   Expert Packing Solutions in Madipakkam & Velachery
+   Expert Packing Solutions in Adyar
   </h2>
 
   <div className="packing-container">
@@ -387,7 +385,7 @@ Packers and Movers in Adyar
     <div className="packing-text">
 
       <p>
-      We specialize in packing solutions in Madipakkam, Velachery, providing customized services for residential and commercial moves. Our packing experts use premium materials like bubble wrap, corrugated boxes, and protective covers to safeguard your valuables.
+      We specialize in packing solutions in Adyar, providing customized services for residential and commercial moves. Our packing experts use premium materials like bubble wrap, corrugated boxes, and protective covers to safeguard your valuables.
       </p>
 
       {/* ICON LIST */}
@@ -470,7 +468,7 @@ Packers and Movers in Adyar
         <h2>Your Local Moving Partner You Can Trust</h2>
 
         <p>
-         With years of experience in the industry, Chennailal Packers and Movers has built a reputation for delivering dependable relocation services. We understand the unique needs of customers in Madipakkam and nearby areas, making us the preferred choice for stress-free moving.
+         With years of experience in the industry, Chennailal Packers and Movers has built a reputation for delivering dependable relocation services. We understand the unique needs of customers in Adyar and nearby areas, making us the preferred choice for stress-free moving.
         </p>
 
         {/* BUTTON */}

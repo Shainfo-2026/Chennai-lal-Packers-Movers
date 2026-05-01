@@ -142,7 +142,7 @@ export default function TamilNaduCitySearch() {
   const locations = [
     // "Sholinganallur",
     "Adayar",
-    "Madipakkam",
+    "Madipakkam"
     // "Kolathur",
     // "Padi"
   ];

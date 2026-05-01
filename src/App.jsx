@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 
-
-import Adayar from "./components/services/Adayar";
-import Madipakkam from "./components/services/Madipakkam";
+// import Adayar from "./components/Services/Adayar.jsx";
+import Madipakkam from "./components/Services/Madipakkam.jsx";
+import Adayar from "./components/Services/Adayar.jsx";
 // import AnnaNagar from "./pages/AnnaNagar";
 // import Madipakkam from "./pages/Madipakkam";
 // import Kolathur from "./pages/Kolathur";
