@@ -3,6 +3,15 @@
 
 import React, { Suspense, lazy, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Routes, Route } from "react-router-dom";
+
+import Adayar from "../components/Services/Adayar";
+import Madipakkam from "../components/Services/Madipakkam";
+// import AnnaNagar from "./AnnaNagar";
+// import Madipakkam from "./Madipakkam";
+// import Kolathur from "./Kolathur";
+// import Padi from "./Padi";
+
 
 // import ServicesHero from "../components/Services/ServicesHero";
 import ServicesIntro from "../components/Services/ServicesIntro";
@@ -188,7 +197,9 @@ export default function Services() {
 
       <IndustriesWeServeBalanced />
    <SpecialOffersPremium />
-      <TamilNaduCitySearch />
+
+   <TamilNaduCitySearch />
+ 
          </Suspense>
     </>
   );

@@ -4,6 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 
+
+import Adayar from "./components/services/Adayar";
+import Madipakkam from "./components/services/Madipakkam";
+// import AnnaNagar from "./pages/AnnaNagar";
+// import Madipakkam from "./pages/Madipakkam";
+// import Kolathur from "./pages/Kolathur";
+// import Padi from "./pages/Padi";
+// import Coimbatore from "./component/services/Coimbatore";
+
 /* Lazy Load Pages */
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -40,11 +49,26 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services/*" element={<Services />} />
+          <Route path="/services/packers-and-movers-in-adayar" element={<Adayar />} />
+          <Route path="/services/packers-and-movers-in-Madipakkam" element={<Madipakkam />} />
           <Route path="/shiftingservices" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<MasonryBlog key="list" />} />
           <Route path="/blog/:id" element={<MasonryBlog key="details" />} />
+
+
+        
+
+{/* <Route path="/packers-and-movers-in-anna-nagar" element={<AnnaNagar />} />
+
+<Route path="/packers-and-movers-in-madipakkam" element={<Madipakkam />} />
+
+<Route path="/packers-and-movers-in-kolathur" element={<Kolathur />} />
+
+<Route path="/packers-and-movers-in-padi" element={<Padi />} />
+
+<Route path="/packers-and-movers-in-coimbatore" element={<Coimbatore />} /> */}
         </Routes>
       </Suspense>
 
