@@ -7,6 +7,8 @@ import { Routes, Route } from "react-router-dom";
 // import Adayar from "./components/Services/Adayar.jsx";
 import Adayar from "../components/Services/Adayar.jsx";
 import Madipakkam from "../components/Services/Madipakkam.jsx";
+import Annanagar from "../components/Services/Annanagar.jsx";
+import Sholinganallur from "../components/Services/Sholinganallur.jsx";
 // import AnnaNagar from "./AnnaNagar";
 // import Madipakkam from "./Madipakkam";
 // import Kolathur from "./Kolathur";

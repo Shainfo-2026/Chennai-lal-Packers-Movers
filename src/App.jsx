@@ -6,6 +6,9 @@ import ScrollToTop from "./components/ScrollToTop";
 
 // import Adayar from "./components/Services/Adayar.jsx";
 import Madipakkam from "./components/Services/Madipakkam.jsx";
+import Sholinganallur from "./components/Services/Sholinganallur.jsx";
+import Annanagar from "./components/Services/Annanagar.jsx";
+
 import Adayar from "./components/Services/Adayar.jsx";
 // import AnnaNagar from "./pages/AnnaNagar";
 // import Madipakkam from "./pages/Madipakkam";
@@ -52,6 +55,9 @@ function App() {
           <Route path="/services/*" element={<Services />} />
           <Route path="/services/packers-and-movers-in-Adayar" element={<Adayar />} />
           <Route path="/services/packers-and-movers-in-Madipakkam" element={<Madipakkam />} />
+          <Route path="/services/packers-and-movers-in-Sholinganallur" element={<Sholinganallur />} />
+         <Route path="/services/packers-and-movers-in-Annanagar" element={<Annanagar />} />
+
           <Route path="/shiftingservices" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<MasonryBlog key="list" />} />
