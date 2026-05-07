@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Madipakkam from "./components/Services/Madipakkam.jsx";
 import Sholinganallur from "./components/Services/Sholinganallur.jsx";
 import Annanagar from "./components/Services/Annanagar.jsx";
+import Padi from "./components/Services/Padi.jsx";
 
 import Adayar from "./components/Services/Adayar.jsx";
 // import AnnaNagar from "./pages/AnnaNagar";
@@ -57,6 +58,7 @@ function App() {
           <Route path="/services/packers-and-movers-in-Madipakkam" element={<Madipakkam />} />
           <Route path="/services/packers-and-movers-in-Sholinganallur" element={<Sholinganallur />} />
          <Route path="/services/packers-and-movers-in-Annanagar" element={<Annanagar />} />
+         <Route path="/services/packers-and-movers-in-Padi" element={<Padi />} />
 
           <Route path="/shiftingservices" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />

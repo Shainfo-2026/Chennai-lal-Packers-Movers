@@ -81,15 +81,36 @@ export default function TamilNaduCitySearch() {
 
 /* CARD */
 .location-card {
-  background: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
   border-radius: 16px;
   border:3px solid #7a0395;
   padding: 30px 20px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s ease;
+
   opacity:0;
   transform:translateY(40px);
+
+  min-height:220px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+  .location-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  // background:rgba(255, 255, 255, 0.45);
+  z-index:1;
 }
 
 .location-card.show{
@@ -106,14 +127,19 @@ export default function TamilNaduCitySearch() {
 .location-icon {
   font-size: 36px;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
 }
 
 /* TEXT */
 .location-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: #062242;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
   line-height: 1.4;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 
 /* RESPONSIVE */
@@ -144,10 +170,11 @@ export default function TamilNaduCitySearch() {
     "Adayar",
     "Madipakkam",
     "Sholinganallur",
-    "Annanagar"
-    // "Kolathur",
-    // "Padi"
+    "Annanagar",
+  
+    "Padi"
   ];
+  
 
   const filtered = locations.filter(loc =>
     loc.toLowerCase().includes(search.toLowerCase())
@@ -169,12 +196,16 @@ export default function TamilNaduCitySearch() {
       <div className="location-grid">
         {filtered.map((loc, i) => (
           <div
-            key={i}
-            className="location-card"
-            onClick={() => goToCityPage(loc)}
-          >
-            <div className="location-icon">📍</div>
-            <div className="location-text">{loc}</div>
+  key={i}
+  className="location-card"
+  onClick={() => goToCityPage(loc)}
+  style={{
+  backgroundImage: `url(/images/places/${loc.toLowerCase()}.png)`
+}}
+>
+            {/* <div className="location-icon">📍</div> */}
+
+            {/* <div className="location-text">{loc}</div> */}
           </div>
         ))}
       </div>
