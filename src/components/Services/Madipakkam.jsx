@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Madipakkam() {
 
@@ -301,6 +302,16 @@ text-align:center;
 
   return (
     <>
+
+
+      <Helmet>
+             
+              <link rel="canonical" href="https://www.chennailalpackersmovers.com/services/madipakkam" />
+    
+            </Helmet>
+
+
+
 
       {/* ===== TOP BANNER ===== */}
       <section className="madi-top">

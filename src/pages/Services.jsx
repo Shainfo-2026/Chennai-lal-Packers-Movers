@@ -31,9 +31,9 @@ const SpecialOffersPremium = lazy(() =>
   import("../components/Services/SpecialOffersPremium")
 );
 
-const TamilNaduCitySearch = lazy(() =>
-  import("../components/Services/TamilNaduCitySearch")
-);
+// const TamilNaduCitySearch = lazy(() =>
+//   import("../components/Services/TamilNaduCitySearch")
+// );
 
 
 export default function Services() {
@@ -174,10 +174,10 @@ export default function Services() {
     <>
 
      <Helmet>
-          <title>Professional Shifting Services in Chennai - Chennai Lal Packers & Movers</title>
+          <title>House Shifting Services in Chennai | Chennailal Packers and Movers</title>
           <meta
             name="description"
-            content="Relocate with ease and efficiency with Chennai Lal Packers & Movers. Our team offers top-notch shifting services in Chennai to make your move stress-free. Contact us today! "
+            content="Professional house shifting services in Chennai with safe packing, loading, transportation, and doorstep delivery at affordable prices. "
           />
          <link rel="canonical" href="https://www.chennailalpackersmovers.com/services" />
         </Helmet>
@@ -201,7 +201,7 @@ export default function Services() {
       <IndustriesWeServeBalanced />
    <SpecialOffersPremium />
 
-   <TamilNaduCitySearch />
+   {/* <TamilNaduCitySearch /> */}
  
          </Suspense>
     </>

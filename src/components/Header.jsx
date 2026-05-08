@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+const [serviceOpen, setServiceOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -52,6 +53,192 @@ export default function Header() {
   display:flex;
   gap:32px;
   align-items:center;
+}
+
+/* SERVICES DROPDOWN */
+/* ================= PREMIUM DROPDOWN ================= */
+
+/* ================= DROPDOWN ================= */
+/* ================= DROPDOWN ================= */
+
+/* ================= DROPDOWN ================= */
+
+.sps-dropdown{
+  position:relative;
+}
+
+/* DROPDOWN MENU */
+/* SERVICES TEXT + ARROW */
+.sps-dropdown-btn-wrap{
+   display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:6px;
+
+  width:100%;
+}
+
+.sps-services-link{
+  text-decoration:none !important;
+
+  color:#ffffff !important;
+
+  font-weight:600;
+
+  font-size:15px;
+
+  line-height:1;
+}
+
+.sps-dropdown-arrow{
+  color:#ffffff;
+
+  cursor:pointer;
+
+  font-size:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-top:2px;
+
+  transition:0.3s ease;
+}
+
+.sps-dropdown-arrow:hover{
+  transform:rotate(180deg);
+}
+.sps-dropdown-menu{
+  position:absolute;
+
+  top:45px;
+  left:0;
+
+  width:250px;
+
+  background:#ffffff;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  border:1px solid #dbe4ef;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.15);
+
+  display:flex;
+  flex-direction:column;
+
+  z-index:9999;
+
+  animation:dropdownFade 0.25s ease;
+}
+
+/* DROPDOWN LINKS */
+.sps-dropdown-menu a{
+  padding:15px 18px;
+
+  text-decoration:none !important;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  color:#15304D !important;
+
+  background:#ffffff !important;
+
+  border-bottom:1px solid #eef2f7;
+
+  transition:0.25s ease;
+
+  display:block;
+}
+
+/* REMOVE LAST BORDER */
+.sps-dropdown-menu a:last-child{
+  border-bottom:none;
+}
+
+/* HOVER */
+.sps-dropdown-menu a:hover,
+.sps-dropdown-menu a:active{
+  background:#15304D !important;
+
+  color:#ffffff !important;
+
+  padding-left:24px;
+}
+
+/* ANIMATION */
+@keyframes dropdownFade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .sps-dropdown{
+    width:100%;
+    text-align:center;
+  }
+
+  .sps-dropdown-menu{
+    position:static;
+
+    width:92%;
+
+    margin:12px auto 0 auto;
+
+    border-radius:12px;
+
+    overflow:hidden;
+  }
+
+  .sps-dropdown-menu a{
+    padding:14px;
+
+    font-size:14px;
+
+    color:#15304D !important;
+
+    background:#ffffff !important;
+
+    -webkit-tap-highlight-color: transparent;
+
+    touch-action: manipulation;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease;
+  }
+
+  /* MOBILE TAP EFFECT */
+  .sps-dropdown-menu a:active{
+    background:#15304D !important;
+
+    color:#ffffff !important;
+
+    transform:scale(0.97);
+  }
+
 }
 
 .sps-nav a{
@@ -163,6 +350,78 @@ export default function Header() {
         <Link to="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
         <Link to="/about" className={isActive("/about") ? "active" : ""} onClick={() => setOpen(false)}>About</Link>
         <Link to="/services" className={isActive("/services") ? "active" : ""} onClick={() => setOpen(false)}>Services</Link>
+<div className="sps-dropdown">
+<div
+  className="sps-dropdown-btn-wrap"
+  onClick={() => setServiceOpen(!serviceOpen)}
+>
+
+  <span className="sps-services-link">
+    Location
+  </span>
+
+  <span className="sps-dropdown-arrow">
+    {serviceOpen ? "▴" : "▾"}
+  </span>
+
+</div>
+
+  {serviceOpen && (
+    <div className="sps-dropdown-menu">
+
+      <Link
+        to="/services/adayar"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Adayar
+      </Link>
+
+      <Link
+        to="/services/madipakkam"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Madipakkam
+      </Link>
+
+      <Link
+        to="/services/sholinganallur"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Sholinganallur
+      </Link>
+
+      <Link
+        to="/services/annanagar"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Annanagar
+      </Link>
+
+      <Link
+        to="/services/padi"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Padi
+      </Link>
+
+    </div>
+  )}
+</div>        {/* <Link to="/services" className={isActive("/services") ? "active" : ""} onClick={() => setOpen(false)}>Services</Link> */}
         <Link to="/shiftingservices" className={isActive("/shiftingservices") ? "active" : ""} onClick={() => setOpen(false)}>Shifting Services</Link>
         <Link to="/contact" className={isActive("/contact") ? "active" : ""} onClick={() => setOpen(false)}>Contact</Link>
         <Link to="/blog" className={isActive("/blog") ? "active" : ""} onClick={() => setOpen(false)}>Blog</Link>

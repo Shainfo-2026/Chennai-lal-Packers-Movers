@@ -54,11 +54,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services/*" element={<Services />} />
-          <Route path="/services/packers-and-movers-in-Adayar" element={<Adayar />} />
-          <Route path="/services/packers-and-movers-in-Madipakkam" element={<Madipakkam />} />
-          <Route path="/services/packers-and-movers-in-Sholinganallur" element={<Sholinganallur />} />
-         <Route path="/services/packers-and-movers-in-Annanagar" element={<Annanagar />} />
-         <Route path="/services/packers-and-movers-in-Padi" element={<Padi />} />
+<Route path="/services/adayar" element={<Adayar />} />
+<Route path="/services/madipakkam" element={<Madipakkam />} />
+<Route path="/services/sholinganallur" element={<Sholinganallur />} />
+<Route path="/services/annanagar" element={<Annanagar />} />
+<Route path="/services/padi" element={<Padi />} />
 
           <Route path="/shiftingservices" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />

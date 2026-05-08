@@ -286,11 +286,11 @@ Please contact the customer ASAP.`;
   return (
     <>
      <Helmet>
-          <title>Contact Chennai Lal Packers & Movers for Reliable and Stress-free Relocation Services
+          <title>Contact Chennailal Packers and Movers | Get Free Moving Quote
  </title>
           <meta
             name="description"
-            content="For all your relocation needs, trust in Chennai Lal Packers Movers. Our expert team provides efficient and stress-free moving services. Contact us now for a seamless moving experience! "
+            content="Contact Chennailal Packers and Movers today for reliable packing and moving services in Chennai. Get a free quote now."
           />
         </Helmet>
       <section className="sps-contact" ref={sectionRef}>

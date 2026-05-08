@@ -374,11 +374,11 @@ html,body{
     <>
 
  <Helmet>
-          <title>Reliable Moving Services - Chennai Lal Packers Movers
+          <title>About Chennailal Packers and Movers | Experienced Moving Company
  </title>
           <meta
             name="description"
-            content="Choose Chennai Lal Packers and Movers for reliable and efficient relocation services in Chennai. Our team of experts will ensure a hassle-free moving experience for your home or office. Contact us today for a stress-free 
+            content="Learn more about Chennailal Packers and Movers, a trusted relocation company in Chennai providing secure packing, moving, and transportation services.
 "
           />
           <link rel="canonical" href="https://www.chennailalpackersmovers.com/about" />
