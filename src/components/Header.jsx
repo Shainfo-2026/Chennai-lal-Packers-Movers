@@ -357,7 +357,7 @@ const [serviceOpen, setServiceOpen] = useState(false);
 >
 
   <span className="sps-services-link">
-    Location
+    Locations
   </span>
 
   <span className="sps-dropdown-arrow">
