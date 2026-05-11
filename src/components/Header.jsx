@@ -418,6 +418,25 @@ const [serviceOpen, setServiceOpen] = useState(false);
       >
         Padi
       </Link>
+      <Link
+        to="/services/ambattur"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Ambattur
+      </Link>
+
+         <Link
+        to="/services/kolathur"
+        onClick={() => {
+          setOpen(false);
+          setServiceOpen(false);
+        }}
+      >
+        Kolathur
+      </Link>
 
     </div>
   )}

@@ -9,6 +9,8 @@ import Madipakkam from "./components/Services/Madipakkam.jsx";
 import Sholinganallur from "./components/Services/Sholinganallur.jsx";
 import Annanagar from "./components/Services/Annanagar.jsx";
 import Padi from "./components/Services/Padi.jsx";
+import Ambattur from "./components/Services/Ambattur.jsx";
+import Kolathur from "./components/Services/Kolathur.jsx";
 
 import Adayar from "./components/Services/Adayar.jsx";
 // import AnnaNagar from "./pages/AnnaNagar";
@@ -59,6 +61,8 @@ function App() {
 <Route path="/services/sholinganallur" element={<Sholinganallur />} />
 <Route path="/services/annanagar" element={<Annanagar />} />
 <Route path="/services/padi" element={<Padi />} />
+<Route path="/services/kolathur" element={<Kolathur />} />
+<Route path="/services/ambattur" element={<Ambattur />} />
 
           <Route path="/shiftingservices" element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
