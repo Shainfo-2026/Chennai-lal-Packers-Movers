@@ -1,13 +1,19 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube
+} from "react-icons/fa";
 import React from "react";
  function Footer() {
   useEffect(() => {
     const css = `
 /* ================= FOOTER ================= */
 .sps-footer{
-  background: linear-gradient(90deg, #062242, #3F6C87); /* BLUE GRADIENT BG */
-  color:#FFFFFF; /* WHITE TEXT */
+  background:
+    linear-gradient(90deg, #062242, #3F6C87);
+  border-top:2px solid rgba(255,255,255,0.08);  color:#FFFFFF; /* WHITE TEXT */
   padding:60px 6vw 30px;
   font-family:Inter,system-ui;
 }
@@ -44,10 +50,12 @@ import React from "react";
 /* LINKS */
 .sps-footer a{
   display:block;
+  line-height:1.8;
   color:#FFFFFF; /* WHITE */
   text-decoration:none;
   font-size:14px;
   margin-bottom:8px;
+  transition:0.3s ease;
 }
 
 .sps-footer a:hover{
@@ -56,8 +64,8 @@ import React from "react";
 
 /* BOTTOM */
 .sps-footer-bottom{
-  margin-top:40px;
-  padding-top:20px;
+    margin-top:50px;
+  padding-top:22px;
   border-top:1px solid rgba(255,255,255,0.35);
   text-align:center;
   font-size:13px;
@@ -70,6 +78,71 @@ import React from "react";
     grid-template-columns:1fr;
     gap:30px;
   }
+}
+
+
+.sps-footer-address{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-top:10px;
+  line-height:1.8;
+  color:#fff;
+  font-size:14px;
+}
+
+.sps-footer-address span{
+  font-size:18px;
+  margin-top:2px;
+}
+
+.sps-footer-address div{
+  opacity:0.95;
+}
+
+.sps-footer-social-icons{
+  display:flex;
+  gap:14px;
+  margin-top:18px;
+}
+
+.sps-footer-social-icons a{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:20px;
+  transition:0.3s ease;
+  color:#fff;
+}
+
+/* INSTAGRAM */
+.sps-footer-social-icons a:nth-child(1){
+  background:linear-gradient(
+    45deg,
+    #F58529,
+    #DD2A7B,
+    #8134AF,
+    #515BD4
+  );
+}
+
+/* FACEBOOK */
+.sps-footer-social-icons a:nth-child(2){
+  background:#1877F2;
+}
+
+/* YOUTUBE */
+.sps-footer-social-icons a:nth-child(3){
+  background:#FF0000;
+}
+
+.sps-footer-social-icons a:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 10px 22px rgba(0,0,0,0.25);
 }
     `;
     const style = document.createElement("style");
@@ -91,8 +164,10 @@ import React from "react";
             loading="lazy"
             decoding="async"
             alt="Chennailal Packers & Movers Logo"
-            style={{ marginBottom: "5px" }}
-          />
+style={{
+  marginBottom:"5px",
+  filter:"drop-shadow(0 5px 12px rgba(255,255,255,0.12))"
+}}          />
 
           <h3>Chennailal Packers & Movers</h3>
 
@@ -139,10 +214,54 @@ import React from "react";
           </a>
 
           <a href="mailto:info@chennailalpackers.com">
-            📧 info@chennailalpackers.com
+            📧 chennailalpackersmovers@gmail.com
           </a>
 
-          <p>📍 Chennai, Tamil Nadu, India</p>
+         <div className="sps-footer-address">
+  <span>📍</span>
+
+  <div>
+    123, Lakshmi Illam, F3, 1st Floor,<br />
+    Madurai Veeran Street,<br />
+    Kalaivanar Nagar, Padi,<br />
+    Chennai – 600050.
+  </div>
+</div>
+
+
+<div className="sps-footer-social-icons">
+
+  <a
+    href="https://www.instagram.com/chennailal_packers_movers/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61577467547428"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.youtube.com/channel/UCUEzb6FagrUTeO1yvl2cUCQ"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+  >
+    <FaYoutube />
+  </a>
+
+</div>
+
+
+
         </div>
 
       </div>

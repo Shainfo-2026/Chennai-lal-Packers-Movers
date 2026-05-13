@@ -273,6 +273,30 @@ Please contact the customer ASAP.`;
     text-align:center;
   }
 }
+
+.sps-info-item{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  background:rgba(255,255,255,0.65);
+  padding:14px 18px;
+  border-radius:16px;
+  border:1px solid rgba(6,34,66,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.sps-info-item span{
+  font-size:22px;
+  line-height:1.4;
+}
+
+.sps-info-item p{
+  margin:0;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.7;
+  color:#062242;
+}
 `;
 
     const style = document.createElement("style");
@@ -305,11 +329,29 @@ Please contact the customer ASAP.`;
               transparent pricing.
             </p>
 
-            <div className="sps-contact-info">
-              <div>📞 +91 93610 46387</div>
-              <div>📍 Pan-India Service</div>
-              <div>🕘 Mon – Sun | 8AM – 9PM</div>
-            </div>
+    <div className="sps-contact-info">
+
+  <div className="sps-info-item">
+    <span>📞</span>
+    <p>+91 93610 46387</p>
+  </div>
+
+  <div className="sps-info-item">
+    <span>📍</span>
+    <p>
+      123, Lakshmi Illam, F3, 1st Floor,<br />
+      Madurai Veeran Street,<br />
+      Kalaivanar Nagar, Padi,<br />
+      Chennai – 600050.
+    </p>
+  </div>
+
+  <div className="sps-info-item">
+    <span>🕘</span>
+    <p>Mon – Sun | 8AM – 9PM</p>
+  </div>
+
+</div>
           </div>
 
           <div className="sps-contact-card">
